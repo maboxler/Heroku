@@ -1,0 +1,34 @@
+New log file opened at Mon Dec 14 14:37:50 CET 2015 by 4288@3dlab7
+Taking next connection to: 57931
+New client attempting to connect on port: 57932-57931
+  Address = /141.37.31.57:57931
+This client on port 57932 has uuid 964c3966-be2a-46c0-8c00-e8ed0ddb9e83 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-964c3966-be2a-46c0-8c00-e8ed0ddb9e83
+Taking next connection to: 57931
+New client attempting to connect on port: 57933-57931
+  Address = /141.37.31.57:57931
+Handshake exception on socket: 57933
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 57931
+New client attempting to connect on port: 57934-57931
+  Address = /141.37.31.57:57931
+This client on port 57934 has uuid 96a1dc08-d064-4c47-83b6-faf1f01187f9 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-964c3966-be2a-46c0-8c00-e8ed0ddb9e83, activator-96a1dc08-d064-4c47-83b6-faf1f01187f9
+Taking next connection to: 57931
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 57931

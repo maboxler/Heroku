@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="countryApp">
+    <head>
+    
+        <title>Wui</title>
+ 
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+		<link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+		
+		<style>
+		    #fields {
+		        width: 800px;
+		    }
+		    
+		    .field {
+		        display: block;
+		        float: left;
+		        width: 100px;
+		        height: 100px;
+                margin: 0px;
+		    }
+		</style>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+        
+        
+        
+        
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+         
+    <script>   
+    
+    var i = 0;
+    var countryApp = angular.module('countryApp', []);
+    countryApp.controller('CountryCtrl', function ($scope){
+      $scope.figures = [
+        		{"figure": "T", "color": "b", "bg": "w", "pos": "07"},
+            	{"figure": "H", "color": "b", "bg": "b", "pos": "17"},
+            	{"figure": "B", "color": "b", "bg": "w", "pos": "27"},
+            	{"figure": "Q", "color": "b", "bg": "b", "pos": "37"},
+            	{"figure": "K", "color": "b", "bg": "w", "pos": "47"},
+            	{"figure": "B", "color": "b", "bg": "b", "pos": "57"},
+            	{"figure": "H", "color": "b", "bg": "w", "pos": "67"},
+            	{"figure": "T", "color": "b", "bg": "b", "pos": "77"},
+            	
+            	{"figure": "P", "color": "b", "bg": "b", "pos": "06"},
+            	{"figure": "P", "color": "b", "bg": "w", "pos": "16"},
+            	{"figure": "P", "color": "b", "bg": "b", "pos": "26"},
+            	{"figure": "P", "color": "b", "bg": "w", "pos": "36"},
+            	{"figure": "P", "color": "b", "bg": "b", "pos": "46"},
+            	{"figure": "P", "color": "b", "bg": "w", "pos": "56"},
+            	{"figure": "P", "color": "b", "bg": "b", "pos": "66"},
+            	{"figure": "P", "color": "b", "bg": "w", "pos": "76"},
+            	
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "04"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "14"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "24"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "34"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "44"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "54"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "64"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "74"},
+                
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "03"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "13"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "23"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "33"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "43"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "53"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "63"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "73"},
+            	
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "05"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "15"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "25"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "35"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "45"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "55"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "65"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "75"},
+            	
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "03"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "13"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "23"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "33"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "43"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "53"},
+            	{"figure": "x", "color": "x", "bg": "b", "pos": "63"},
+            	{"figure": "x", "color": "x", "bg": "w", "pos": "73"},
+
+            	{"figure": "P", "color": "w", "bg": "w", "pos": "01"},
+            	{"figure": "P", "color": "w", "bg": "b", "pos": "11"},
+            	{"figure": "P", "color": "w", "bg": "w", "pos": "21"},
+            	{"figure": "P", "color": "w", "bg": "b", "pos": "31"},
+            	{"figure": "P", "color": "w", "bg": "w", "pos": "41"},
+            	{"figure": "P", "color": "w", "bg": "b", "pos": "51"},
+            	{"figure": "P", "color": "w", "bg": "w", "pos": "61"},
+            	{"figure": "P", "color": "w", "bg": "b", "pos": "71"},
+            	{"figure": "T", "color": "w", "bg": "b", "pos": "00"},
+            	{"figure": "H", "color": "w", "bg": "w", "pos": "10"},
+            	{"figure": "B", "color": "w", "bg": "b", "pos": "20"},
+            	{"figure": "Q", "color": "w", "bg": "w", "pos": "30"},
+            	{"figure": "K", "color": "w", "bg": "b", "pos": "40"},
+            	{"figure": "B", "color": "w", "bg": "w", "pos": "50"},
+            	{"figure": "H", "color": "w", "bg": "b", "pos": "60"},
+            	{"figure": "T", "color": "w", "bg": "w", "pos": "70"}
+      ];
+    });
+    
+    
+    
+	      
+    </script>
+        
+        
+        
+        
+    </head>
+    <body ng-controller="CountryCtrl">
+    	<ul>
+    		<span ng-repeat="figur in figures">
+    		 if($index == 1){
+                break;
+            }
+    		<img ng-src="/assets/images/{{figur.color}}{{figur.figure}}{{figur.bg}}.jpg" class="field"/>
+    		</span>
+    	</ul>
+     
+    	<button onclick="placeFigures(figures)">Play</button> -->
+    </body>
+</html>
