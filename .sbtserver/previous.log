@@ -1,5 +1,5 @@
-New log file opened at Wed Dec 16 11:14:20 CET 2015 by 5468@3dlab5
-jvm 5468@3dlab5
+New log file opened at Wed Dec 16 15:50:59 CET 2015 by 4928@3dlab5
+jvm 4928@3dlab5
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.60-b23
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in Z:\5 Semester\WebTechnologien\Chess\project, returning: (chess-build)
 Loading project definition from Z:\5 Semester\WebTechnologien\Chess\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@5adeb26, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@5c45e590, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -67,94 +67,10 @@ Set current project to UChess beta (in build file:/Z:/5%20Semester/WebTechnologi
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/Z:/5%20Semester/WebTechnologien/Chess/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@41655fa2, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 1 s, completed 16.12.2015 11:14:24
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Z:/5%20Semester/WebTechnologien/Chess/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@3eb13a3, check cycles: false
-Total time: 0 s, completed 16.12.2015 11:14:24
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Z:/5%20Semester/WebTechnologien/Chess/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@5e1d626, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 0 s, completed 16.12.2015 11:14:25
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Z:/5%20Semester/WebTechnologien/Chess/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@7ae27dde, check cycles: false
-Total time: 0 s, completed 16.12.2015 11:14:25
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Z:/5%20Semester/WebTechnologien/Chess/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@46d7e159, check cycles: false
-Total time: 0 s, completed 16.12.2015 11:18:26
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/Z:/5%20Semester/WebTechnologien/Chess/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@24d50702, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 0 s, completed 16.12.2015 11:18:27
-> server-post-command-cleanup
-> server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
 Closing listening server socket
 Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 5468@3dlab5 logs at Wed Dec 16 11:18:29 CET 2015, goodbye.
+Closing the 4928@3dlab5 logs at Wed Dec 16 15:51:05 CET 2015, goodbye.
