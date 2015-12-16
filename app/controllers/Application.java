@@ -55,7 +55,7 @@ public class Application extends Controller {
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
                 in.onMessage(new Callback<String>() {
                         public void invoke(String event) {
-                            out.write("Nachricht erhalten");
+                            out.write("Nachricht " + event);
                         }
                     });
                 in.onClose(new Callback0() {

@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-
-<html lang="en" ng-app="countryApp">
+<html lang="en" ng-app>
     <head>
-    
         <title>Wui</title>
  
 		<!-- Latest compiled and minified CSS -->
@@ -28,110 +25,217 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-        
-        
-        
-        
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
-         
-    <script>   
-    
-    var i = 0;
-    var countryApp = angular.module('countryApp', []);
-    countryApp.controller('CountryCtrl', function ($scope){
-      $scope.figures = [
-        		{"figure": "T", "color": "b", "bg": "w", "pos": "07"},
-            	{"figure": "H", "color": "b", "bg": "b", "pos": "17"},
-            	{"figure": "B", "color": "b", "bg": "w", "pos": "27"},
-            	{"figure": "Q", "color": "b", "bg": "b", "pos": "37"},
-            	{"figure": "K", "color": "b", "bg": "w", "pos": "47"},
-            	{"figure": "B", "color": "b", "bg": "b", "pos": "57"},
-            	{"figure": "H", "color": "b", "bg": "w", "pos": "67"},
-            	{"figure": "T", "color": "b", "bg": "b", "pos": "77"},
-            	
-            	{"figure": "P", "color": "b", "bg": "b", "pos": "06"},
-            	{"figure": "P", "color": "b", "bg": "w", "pos": "16"},
-            	{"figure": "P", "color": "b", "bg": "b", "pos": "26"},
-            	{"figure": "P", "color": "b", "bg": "w", "pos": "36"},
-            	{"figure": "P", "color": "b", "bg": "b", "pos": "46"},
-            	{"figure": "P", "color": "b", "bg": "w", "pos": "56"},
-            	{"figure": "P", "color": "b", "bg": "b", "pos": "66"},
-            	{"figure": "P", "color": "b", "bg": "w", "pos": "76"},
-            	
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "04"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "14"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "24"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "34"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "44"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "54"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "64"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "74"},
+        <script>
+            var figures = {
+                fields: [
+                	{"figure": "T", "color": "b", "bg": "w", "pos": "07"},
+                	{"figure": "H", "color": "b", "bg": "b", "pos": "17"},
+                	{"figure": "B", "color": "b", "bg": "w", "pos": "27"},
+                	{"figure": "Q", "color": "b", "bg": "b", "pos": "37"},
+                	{"figure": "K", "color": "b", "bg": "w", "pos": "47"},
+                	{"figure": "B", "color": "b", "bg": "b", "pos": "57"},
+                	{"figure": "H", "color": "b", "bg": "w", "pos": "67"},
+                	{"figure": "T", "color": "b", "bg": "b", "pos": "77"},
+                	{"figure": "P", "color": "b", "bg": "b", "pos": "06"},
+                	{"figure": "P", "color": "b", "bg": "w", "pos": "16"},
+                	{"figure": "P", "color": "b", "bg": "b", "pos": "26"},
+                	{"figure": "P", "color": "b", "bg": "w", "pos": "36"},
+                	{"figure": "P", "color": "b", "bg": "b", "pos": "46"},
+                	{"figure": "P", "color": "b", "bg": "w", "pos": "56"},
+                	{"figure": "P", "color": "b", "bg": "b", "pos": "66"},
+                	{"figure": "P", "color": "b", "bg": "w", "pos": "76"},
+                	{"figure": "P", "color": "w", "bg": "w", "pos": "01"},
+                	{"figure": "P", "color": "w", "bg": "b", "pos": "11"},
+                	{"figure": "P", "color": "w", "bg": "w", "pos": "21"},
+                	{"figure": "P", "color": "w", "bg": "b", "pos": "31"},
+                	{"figure": "P", "color": "w", "bg": "w", "pos": "41"},
+                	{"figure": "P", "color": "w", "bg": "b", "pos": "51"},
+                	{"figure": "P", "color": "w", "bg": "w", "pos": "61"},
+                	{"figure": "P", "color": "w", "bg": "b", "pos": "71"},
+                	{"figure": "T", "color": "w", "bg": "b", "pos": "00"},
+                	{"figure": "H", "color": "w", "bg": "w", "pos": "10"},
+                	{"figure": "B", "color": "w", "bg": "b", "pos": "20"},
+                	{"figure": "Q", "color": "w", "bg": "w", "pos": "30"},
+                	{"figure": "K", "color": "w", "bg": "b", "pos": "40"},
+                	{"figure": "B", "color": "w", "bg": "w", "pos": "50"},
+                	{"figure": "H", "color": "w", "bg": "b", "pos": "60"},
+                	{"figure": "T", "color": "w", "bg": "w", "pos": "70"}
+                ]
+            };
+            
+           
+    		
+    		function move() {
+    		    socket.send('bla test 2');
+    		    alert(this.id);
+    		}
+    		
+    		var socket;
+    		
+    		$(document).ready(function() {
                 
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "03"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "13"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "23"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "33"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "43"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "53"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "63"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "73"},
-            	
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "05"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "15"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "25"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "35"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "45"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "55"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "65"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "75"},
-            	
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "03"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "13"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "23"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "33"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "43"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "53"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "63"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "73"},
-
-            	{"figure": "P", "color": "w", "bg": "w", "pos": "01"},
-            	{"figure": "P", "color": "w", "bg": "b", "pos": "11"},
-            	{"figure": "P", "color": "w", "bg": "w", "pos": "21"},
-            	{"figure": "P", "color": "w", "bg": "b", "pos": "31"},
-            	{"figure": "P", "color": "w", "bg": "w", "pos": "41"},
-            	{"figure": "P", "color": "w", "bg": "b", "pos": "51"},
-            	{"figure": "P", "color": "w", "bg": "w", "pos": "61"},
-            	{"figure": "P", "color": "w", "bg": "b", "pos": "71"},
-            	{"figure": "T", "color": "w", "bg": "b", "pos": "00"},
-            	{"figure": "H", "color": "w", "bg": "w", "pos": "10"},
-            	{"figure": "B", "color": "w", "bg": "b", "pos": "20"},
-            	{"figure": "Q", "color": "w", "bg": "w", "pos": "30"},
-            	{"figure": "K", "color": "w", "bg": "b", "pos": "40"},
-            	{"figure": "B", "color": "w", "bg": "w", "pos": "50"},
-            	{"figure": "H", "color": "w", "bg": "b", "pos": "60"},
-            	{"figure": "T", "color": "w", "bg": "w", "pos": "70"}
-      ];
-    });
+                socket = new WebSocket("ws://localhost:9000/socket");  
+                socket.onopen = function(){ alert("Mit Socket verbunden"); };  
+                socket.onmessage = function(message){ alert("Nachricht: " + message.data);}; 
+                socket.onerror = function(){ alert("Fehler aufgetrreten"); };  
+                socket.onclose = function(){ alert("Server hat verbindung beendet");};
+                $('.field').on('click', move);
     
-    
-    
-	      
-    </script>
+            });
+        </script>
+        
+        
+        
+         <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+		 <script>
+	      var nameApp = angular.module('nameApp', []);
+	      nameApp.controller('NameCtrl', function ($scope){
+	        
+	    	$scope.fields = [
+	    	                	{"figure": "T", "color": "b", "bg": "w", "pos": "07"},
+	    	                	{"figure": "H", "color": "b", "bg": "b", "pos": "17"},
+	    	                	{"figure": "B", "color": "b", "bg": "w", "pos": "27"},
+	    	                	{"figure": "Q", "color": "b", "bg": "b", "pos": "37"},
+	    	                	{"figure": "K", "color": "b", "bg": "w", "pos": "47"},
+	    	                	{"figure": "B", "color": "b", "bg": "b", "pos": "57"},
+	    	                	{"figure": "H", "color": "b", "bg": "w", "pos": "67"},
+	    	                	{"figure": "T", "color": "b", "bg": "b", "pos": "77"},
+	    	                	{"figure": "P", "color": "b", "bg": "b", "pos": "06"},
+	    	                	{"figure": "P", "color": "b", "bg": "w", "pos": "16"},
+	    	                	{"figure": "P", "color": "b", "bg": "b", "pos": "26"},
+	    	                	{"figure": "P", "color": "b", "bg": "w", "pos": "36"},
+	    	                	{"figure": "P", "color": "b", "bg": "b", "pos": "46"},
+	    	                	{"figure": "P", "color": "b", "bg": "w", "pos": "56"},
+	    	                	{"figure": "P", "color": "b", "bg": "b", "pos": "66"},
+	    	                	{"figure": "P", "color": "b", "bg": "w", "pos": "76"},
+	    	                	
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "05"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "15"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "25"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "35"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "45"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "55"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "65"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "75"},
+	    	                	
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "04"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "14"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "24"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "34"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "44"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "54"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "64"},
+	    	                	{"figure": "x", "color": "x", "bg": "w", "pos": "74"},
+	    	                	
+	    	                	{"figure": "P", "color": "w", "bg": "w", "pos": "01"},
+	    	                	{"figure": "P", "color": "w", "bg": "b", "pos": "11"},
+	    	                	{"figure": "P", "color": "w", "bg": "w", "pos": "21"},
+	    	                	{"figure": "P", "color": "w", "bg": "b", "pos": "31"},
+	    	                	{"figure": "P", "color": "w", "bg": "w", "pos": "41"},
+	    	                	{"figure": "P", "color": "w", "bg": "b", "pos": "51"},
+	    	                	{"figure": "P", "color": "w", "bg": "w", "pos": "61"},
+	    	                	{"figure": "P", "color": "w", "bg": "b", "pos": "71"},
+	    	                	{"figure": "T", "color": "w", "bg": "b", "pos": "00"},
+	    	                	{"figure": "H", "color": "w", "bg": "w", "pos": "10"},
+	    	                	{"figure": "B", "color": "w", "bg": "b", "pos": "20"},
+	    	                	{"figure": "Q", "color": "w", "bg": "w", "pos": "30"},
+	    	                	{"figure": "K", "color": "w", "bg": "b", "pos": "40"},
+	    	                	{"figure": "B", "color": "w", "bg": "w", "pos": "50"},
+	    	                	{"figure": "H", "color": "w", "bg": "b", "pos": "60"},
+	    	                	{"figure": "T", "color": "w", "bg": "w", "pos": "70"}
+	    	                ]  
+	    	
+	    	
+	    	 function placeFigures(figures){
+		        for(var k = 0; k < figures.fields.length; k++){
+                    document.getElementById('field-' + figures.fields[k].pos).src = '/assets/images/' + figures.fields[k].color + figures.fields[k].figure + figures.fields[k].bg + '.jpg';
+                }
+    		}
+	    	
+	
+	        $scope.addName = function() {
+	          $scope.names.push($scope.enteredName);
+	          $scope.enteredName = '';
+	        };
+	        
+	        
+	        
+	        
+	        
+	      });
+	    </script>
         
         
         
         
     </head>
-    <body ng-controller="CountryCtrl">
-    	<ul>
-    		<span ng-repeat="figur in figures">
-    		 if($index == 1){
-                break;
-            }
-    		<img ng-src="/assets/images/{{figur.color}}{{figur.figure}}{{figur.bg}}.jpg" class="field"/>
-    		</span>
-    	</ul>
-     
-    	<button onclick="placeFigures(figures)">Play</button> -->
+    <body>
+        <div id="fields">
+            <img id="field-07" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-17" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-27" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-37" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-47" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-57" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-67" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-77" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-06" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-16" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-26" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-36" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-46" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-56" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-66" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-76" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-05" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-15" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-25" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-35" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-45" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-55" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-65" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-75" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-04" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-14" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-24" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-34" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-44" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-54" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-64" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-74" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-03" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-13" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-23" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-33" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-43" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-53" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-63" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-73" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-02" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-12" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-22" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-32" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-42" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-52" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-62" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-72" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-01" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-11" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-21" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-31" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-41" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-51" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-61" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-71" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-00" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-10" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-20" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-30" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-40" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-50" src="/assets/images/xxw.jpg" class="field" />
+        	<img id="field-60" src="/assets/images/xxb.jpg" class="field" />
+        	<img id="field-70" src="/assets/images/xxw.jpg" class="field" />
+        </div>
+    	<button onclick="placeFigures(figures)">Play</button>
     </body>
 </html>
