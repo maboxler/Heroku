@@ -1,5 +1,5 @@
-New log file opened at Wed Dec 16 15:50:59 CET 2015 by 4928@3dlab5
-jvm 4928@3dlab5
+New log file opened at Wed Dec 16 16:05:04 CET 2015 by 7824@3dlab5
+jvm 7824@3dlab5
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.60-b23
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in Z:\5 Semester\WebTechnologien\Chess\project, returning: (chess-build)
 Loading project definition from Z:\5 Semester\WebTechnologien\Chess\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@5c45e590, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@486dc2e6, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -73,4 +73,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 4928@3dlab5 logs at Wed Dec 16 15:51:05 CET 2015, goodbye.
+Closing the 7824@3dlab5 logs at Wed Dec 16 16:05:10 CET 2015, goodbye.
