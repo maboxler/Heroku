@@ -55,7 +55,14 @@ public class Application extends Controller {
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
                 in.onMessage(new Callback<String>() {
                         public void invoke(String field) {
-                            out.write("" + field);
+                            //out.write("Server: " + field);
+//                        	String t = "[{\"figure\":\"T\",\"color\":\"w\",\"bg\":\"w\",\"pos\":\"70\"},"
+//                        			  + "{\"figure\":\"T\",\"color\":\"w\",\"bg\":\"w\",\"pos\":\"70\"},"
+//                        			  + "{\"figure\":\"T\",\"color\":\"w\",\"bg\":\"w\",\"pos\":\"70\"}]";
+                        	
+                        	String t = init.getTui().getFigures();                     	
+                        	
+                        	out.write(t);
                         }
                     });
                 in.onClose(new Callback0() {

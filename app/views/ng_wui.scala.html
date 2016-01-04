@@ -33,23 +33,59 @@
          
     <script>   
     
-    var i = 0;
+    var i = 1;
+    var endpos = "";
+    var str1 = "";
+
     var countryApp = angular.module('countryApp', []);
     countryApp.controller('CountryCtrl', function ($scope){
         angular.element(document).ready(function () {
             
-            	//$scope.socket = new WebSocket("ws://localhost:9000/socket");
-                $scope.socket = new WebSocket("ws://uchess.herokuapp.com/socket"); 
+            	$scope.socket = new WebSocket("ws://localhost:9000/socket");
+                //$scope.socket = new WebSocket("ws://uchess.herokuapp.com/socket"); 
                 $scope.socket.onopen    = function(){ alert("Mit Socket verbunden"); };  
-                $scope.socket.onmessage = function(message){ alert("Nachricht: " + message.data);}; 
+                $scope.socket.onmessage = function(message){ 
+                	
+                	alert("Nachricht_client: " + message.data);
+                	 $scope.figures = message.data;
+                	 console.log($scope.figures);
+                	
+                }; 
                 $scope.socket.onerror   = function(){ alert("Fehler aufgetrreten"); };  
                 $scope.socket.onclose   = function(){ alert("Server hat verbindung beendet");};
             
         });
     		
     	$scope.move = function(pos) {
-            $scope.socket.send(pos);
+			
+    		
+			if(i == 1) {
+	    		str1 = pos;
+	    		document.getElementById("click").firstChild.nodeValue = "1 Feld gedrueckt";
+
+			}
+			
+			if(i == 2) {
+    			endpos = str1.concat(pos);
+    			console.log("send pos " + endpos);
+    			$scope.socket.send(endpos);    	
+    			i = 0;
+    			str1 = "";
+    			endpos = "";
+    			console.log($scope.figures);
+    			document.getElementById("click").firstChild.nodeValue = "0 Felder gedrueckt";
+    		}
+						
+			i = i + 1;
         };
+        
+        
+        
+		$scope.placeFigures = function(pos) {
+
+				
+        };
+
     		
         
         
@@ -135,11 +171,6 @@
       
     });
     
-  
-    
-    
-   
-    
     
 	      
     </script>
@@ -157,9 +188,6 @@
     		</span>
     	</ul>
      
-    	<button onclick="placeFigures(figures)">Play</button> -->
-    	
-    	Heorku Test 15:53
-    	
+    	<span id="click">0 Felder gedrueckt</span>
     </body>
 </html>

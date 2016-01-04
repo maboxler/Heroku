@@ -1,9 +1,0 @@
-New log file opened at Wed Nov 18 11:57:29 CET 2015 by 3844@3dlab1
-Sending msg to client activator-c19c06b3-d48d-4de7-8375-df3eddbef2e5: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: Z:\5 Semester\WebTechnologien\Git Play\WebTechPlay\Play\UChess beta\.sbtserver\connections\master.log))
-Sending msg to client activator-c19c06b3-d48d-4de7-8375-df3eddbef2e5: DetachedLogEvent(LogMessage(debug,sbt client logs are in: Z:\5 Semester\WebTechnologien\Git Play\WebTechPlay\Play\UChess beta\.sbtserver\connections\activator-c19c06b3-d48d-4de7-8375-df3eddbef2e5.log))
-Sending msg to client activator-c19c06b3-d48d-4de7-8375-df3eddbef2e5: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: Z:\5 Semester\WebTechnologien\Git Play\WebTechPlay\Play\UChess beta\.sbtserver\master.log))
-Reading next message from client.
-Client activator-c19c06b3-d48d-4de7-8375-df3eddbef2e5 EOF, shutting down.
-Stopping client.
-Dropping message (0,ReceivedResponse()) to dead client activator-c19c06b3-d48d-4de7-8375-df3eddbef2e5
-Client activator-c19c06b3-d48d-4de7-8375-df3eddbef2e5 thread exiting.
