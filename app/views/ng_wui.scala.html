@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="countryApp">
+<html lang="en" ng-app="chessApp">
     <head>
     
         <title>Wui</title>
@@ -37,24 +37,28 @@
     var endpos = "";
     var str1 = "";
 
-    var countryApp = angular.module('countryApp', []);
-    countryApp.controller('CountryCtrl', function ($scope){
-        angular.element(document).ready(function () {
-            
-            	$scope.socket = new WebSocket("ws://localhost:9000/socket");
-                //$scope.socket = new WebSocket("ws://uchess.herokuapp.com/socket"); 
-                $scope.socket.onopen    = function(){ alert("Mit Socket verbunden"); };  
-                $scope.socket.onmessage = function(message){ 
-                	
-                	alert("Nachricht_client: " + message.data);
-                	 $scope.figures = message.data;
-                	 console.log($scope.figures);
-                	
-                }; 
-                $scope.socket.onerror   = function(){ alert("Fehler aufgetrreten"); };  
-                $scope.socket.onclose   = function(){ alert("Server hat verbindung beendet");};
-            
-        });
+    var chessApp = angular.module('chessApp', []);
+    chessApp.controller('ChessCtrl', function ($scope){
+    	 var $socket = new WebSocket("ws://localhost:9000/socket");
+        //$scope.socket = new WebSocket("ws://uchess.herokuapp.com/socket"); 
+        $socket.onopen    = function(){ alert("Mit Socket verbunden"); };  
+        $socket.onmessage = function(message){ 
+        	        	
+        	var msg = JSON.parse(message.data);
+        	if(msg.type == "field"){
+        		$scope.figures = msg.figures;
+        	} elseif(msg.type == "endofgame"){
+        		alert(msg.winner + " has won the game!");
+        		/*
+        		{
+        			"type": "endofgame",
+        			"winner": "username"
+        		}
+        		*/
+        	}
+        }; 
+        $socket.onerror   = function(){ alert("Fehler aufgetrreten"); };  
+        $socket.onclose   = function(){ alert("Server hat verbindung beendet");};
     		
     	$scope.move = function(pos) {
 			
@@ -66,28 +70,19 @@
 			}
 			
 			if(i == 2) {
-    			endpos = str1.concat(pos);
+				endpos = str1 + " " + pos;
+    		
     			console.log("send pos " + endpos);
-    			$scope.socket.send(endpos);    	
+    			$socket.send(endpos);
     			i = 0;
     			str1 = "";
     			endpos = "";
-    			console.log($scope.figures);
     			document.getElementById("click").firstChild.nodeValue = "0 Felder gedrueckt";
     		}
 						
 			i = i + 1;
         };
-        
-        
-        
-		$scope.placeFigures = function(pos) {
-
-				
-        };
-
-    		
-        
+               
         
       $scope.figures = [
         		{"figure": "T", "color": "b", "bg": "w", "pos": "07"},
@@ -179,7 +174,7 @@
         
         
     </head>
-    <body ng-controller="CountryCtrl">
+    <body ng-controller="ChessCtrl">
     	<ul>
     		<span ng-repeat="figur in figures">
     		<div ng-if="($index % 8) == 0" class="row"></div>

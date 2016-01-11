@@ -53,21 +53,14 @@ public class Application extends Controller {
     public WebSocket<String> webSocket() {
         return new WebSocket<String>() {
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
-                in.onMessage(new Callback<String>() {
-                        public void invoke(String field) {
+                in.onMessage(event -> {
+                			Init.getInstance().getTui().processInputLine(event);
                             //out.write("Server: " + field);
-//                        	String t = "[{\"figure\":\"T\",\"color\":\"w\",\"bg\":\"w\",\"pos\":\"70\"},"
-//                        			  + "{\"figure\":\"T\",\"color\":\"w\",\"bg\":\"w\",\"pos\":\"70\"},"
-//                        			  + "{\"figure\":\"T\",\"color\":\"w\",\"bg\":\"w\",\"pos\":\"70\"}]";
-                        	
-                        	String t = init.getTui().getFigures();                     	
-                        	
+                        	String t = Init.getInstance().getTui().getFigures();
+
                         	out.write(t);
-                        }
-                    });
-                in.onClose(new Callback0() {
-                        public void invoke() { out.write("und Tschues");}
-                    });
+                        });
+                in.onClose(() -> {System.out.println("USER CLOSED CONNECTION:");});
             }
         };
     }
