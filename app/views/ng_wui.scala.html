@@ -39,13 +39,22 @@
 
     var chessApp = angular.module('chessApp', []);
     chessApp.controller('ChessCtrl', function ($scope){
-    	 var $socket = new WebSocket("ws://localhost:9000/socket");
+    	var $socket = new WebSocket("ws://localhost:9000/socket");
         //$scope.socket = new WebSocket("ws://uchess.herokuapp.com/socket"); 
         $socket.onopen    = function(){ alert("Mit Socket verbunden"); };  
         $socket.onmessage = function(message){ 
-        	        	
-        	var msg = JSON.parse(message.data);
-        	$scope.figures = msg.figures;
+        	
+        	if(message == "x") {
+        		console.log("x msg");
+        	} else {
+        		var msg = JSON.parse(message.data);
+            	$scope.figures = msg.figures;
+            	$scope.$apply();
+            	console.log($scope.figures);
+        		
+        	}
+        	
+        	
         	/*if(msg.type == "field"){
         		$scope.figures = msg.figures;
         	} elseif(msg.type == "endofgame"){
@@ -61,8 +70,18 @@
         $socket.onerror   = function(){ alert("Fehler aufgetrreten"); };  
         $socket.onclose   = function(){ alert("Server hat verbindung beendet");};
     		
+        angular.element(document).ready(function () {
+        	$scope.$apply();
+        });
+       
+        
+        $scope.getField = function() {
+        	$socket.send("field"); 	
+        };
+        
+        
     	$scope.move = function(pos) {
-			
+    		
     		
 			if(i == 1) {
 	    		str1 = pos;
@@ -74,7 +93,7 @@
 				endpos = str1 + " " + pos;
     		
     			console.log("send pos " + endpos);
-    			$socket.send(endpos);
+    			$socket.send("_"+endpos);
     			i = 0;
     			str1 = "";
     			endpos = "";
@@ -85,7 +104,7 @@
         };
                
         
-      $scope.figures = [
+      $scope.figures = [/*
         		{"figure": "T", "color": "b", "bg": "w", "pos": "07"},
             	{"figure": "H", "color": "b", "bg": "b", "pos": "17"},
             	{"figure": "B", "color": "b", "bg": "w", "pos": "27"},
@@ -159,7 +178,7 @@
             	{"figure": "K", "color": "w", "bg": "b", "pos": "40"},
             	{"figure": "B", "color": "w", "bg": "w", "pos": "50"},
             	{"figure": "H", "color": "w", "bg": "b", "pos": "60"},
-            	{"figure": "T", "color": "w", "bg": "w", "pos": "70"}
+            	{"figure": "T", "color": "w", "bg": "w", "pos": "70"}*/
       ];
       
 
@@ -185,5 +204,6 @@
     	</ul>
      
     	<span id="click">0 Felder gedrueckt</span>
+    	 <button ng-click="getField()">Click me</button> 
     </body>
 </html>

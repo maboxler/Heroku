@@ -1,5 +1,5 @@
-New log file opened at Wed Jan 13 10:04:05 CET 2016 by 4248@3dlab8
-jvm 4248@3dlab8
+New log file opened at Wed Jan 13 15:33:25 CET 2016 by 6580@3dlab1
+jvm 6580@3dlab1
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.60-b23
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\maboxler\Desktop\Heroku\project, returning: (heroku-build)
 Loading project definition from C:\Users\maboxler\Desktop\Heroku\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@f8702ed, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@46d0b998, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -69,35 +69,43 @@ Set current project to UChess beta (in build file:/C:/Users/maboxler/Desktop/Her
 > server-handle-next-server-request
 > {file:/C:/Users/maboxler/Desktop/Heroku/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@3d4d1ab5, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@1f53b736, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452695542990) to lastModified(1452695543777)
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
 	modified: Set()
-Removed products: Set()
+Removed products: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application$1.class)
 External API changes: API Changes: Set()
-Modified binary dependencies: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
 Initial directly invalidated sources: Set()
 
 Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
+	product: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
 	external source: Set()
-All initially invalidated sources: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
 
-Total time: 1 s, completed 13.01.2016 10:04:09
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/maboxler/Desktop/Heroku/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@35aeee40, check cycles: false
-Total time: 0 s, completed 13.01.2016 10:04:10
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@4dd370a2 directly...
+Java compilation took 0.408394436 s
+Java analysis took 0.040427031 s
+Java compile + analysis took 0.456877823 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed 13.01.2016 15:33:31
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/maboxler/Desktop/Heroku/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@6b273928, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@444a3ba, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452695543777) to lastModified(1452695610810)
 
 Initial source changes: 
 	removed:Set()
@@ -105,27 +113,40 @@ Initial source changes:
 	modified: Set()
 Removed products: Set()
 External API changes: API Changes: Set()
-Modified binary dependencies: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
 Initial directly invalidated sources: Set()
 
 Sources indirectly invalidated by:
 	product: Set()
-	binary dep: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
 	external source: Set()
-All initially invalidated sources: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
 
-Total time: 0 s, completed 13.01.2016 10:04:10
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@4d69e2ea directly...
+Java compilation took 0.203956177 s
+Java analysis took 0.014967848 s
+Java compile + analysis took 0.224866378 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 13.01.2016 15:33:32
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/maboxler/Desktop/Heroku/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@2cd91175, check cycles: false
-Total time: 0 s, completed 13.01.2016 10:04:10
+Running task... Cancel: sbt.server.ServerTaskCancellation@55db32cd, check cycles: false
+Total time: 0 s, completed 13.01.2016 15:33:32
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/maboxler/Desktop/Heroku/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@340b9132, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@4802e677, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452695610810) to lastModified(1452695611981)
 
 Initial source changes: 
 	removed:Set()
@@ -133,21 +154,52 @@ Initial source changes:
 	modified: Set()
 Removed products: Set()
 External API changes: API Changes: Set()
-Modified binary dependencies: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
 Initial directly invalidated sources: Set()
 
 Sources indirectly invalidated by:
 	product: Set()
-	binary dep: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
 	external source: Set()
-All initially invalidated sources: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
 
-Total time: 1 s, completed 13.01.2016 10:07:59
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@28af862b directly...
+Java compilation took 0.090723667 s
+Java analysis took 0.013252572 s
+Java compile + analysis took 0.109899618 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 0 s, completed 13.01.2016 15:33:32
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/maboxler/Desktop/Heroku/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@44ab7e2b, check cycles: false
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@3f9e8ca1, check cycles: false
+Total time: 0 s, completed 13.01.2016 15:33:34
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@6b452ecc, check cycles: false
+Total time: 1 s, completed 13.01.2016 15:33:37
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@7b763b1f, check cycles: false
+Total time: 0 s, completed 13.01.2016 15:33:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@46fef912, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452695611981) to lastModified(1452695612456)
 
 Initial source changes: 
 	removed:Set()
@@ -155,22 +207,770 @@ Initial source changes:
 	modified: Set()
 Removed products: Set()
 External API changes: API Changes: Set()
-Modified binary dependencies: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
 Initial directly invalidated sources: Set()
 
 Sources indirectly invalidated by:
 	product: Set()
-	binary dep: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
 	external source: Set()
-All initially invalidated sources: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
 
-Total time: 1 s, completed 13.01.2016 10:07:59
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@6d1c1e42 directly...
+Java compilation took 0.198302141 s
+Java analysis took 0.025900832 s
+Java compile + analysis took 0.232542668 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\maboxler\Desktop\Heroku\conf\application.conf,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\maboxler\Desktop\Heroku\conf\logback.xml,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\maboxler\Desktop\Heroku\conf\routes,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 13.01.2016 15:33:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@50b4fa6b, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452695612456) to lastModified(1452695619683)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala, C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Scala source and 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 5ee5f01b, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes;C:\Users\maboxler\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar
+	-classpath
+	C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes;C:\Users\maboxler\Desktop\Heroku\lib\json-simple-1.1.1.jar;C:\Users\maboxler\Desktop\Heroku\lib\UChess.jar;C:\Users\maboxler\Desktop\Heroku\lib\UChess_Gut.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.1.1.jar;C:\Users\maboxler\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.4.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-enhancer\jars\play-enhancer-1.1.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe\config\bundles\config-1.3.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.8.1.jar;C:\Users\maboxler\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.7.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.6.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.3.jar;C:\Users\maboxler\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.13.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.13.jar;C:\Users\maboxler\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.10.jar;C:\Users\maboxler\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\maboxler\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\maboxler\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\maboxler\.ivy2\cache\com.google.inject\guice\jars\guice-4.0.jar;C:\Users\maboxler\.ivy2\cache\javax.inject\javax.inject\jars\javax.inject-1.jar;C:\Users\maboxler\.ivy2\cache\aopalliance\aopalliance\jars\aopalliance-1.0.jar;C:\Users\maboxler\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\jars\guice-assistedinject-4.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.3.0.jar;C:\Users\maboxler\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.15.jar;C:\Users\maboxler\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\maboxler\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\maboxler\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.1.Final.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.9.jar;C:\Users\maboxler\.ivy2\cache\com.google.guava\guava\bundles\guava-18.0.jar;C:\Users\maboxler\.ivy2\cache\com.google.code.findbugs\annotations\jars\annotations-2.0.1.jar;C:\Users\maboxler\.ivy2\cache\net.jodah\typetools\bundles\typetools-0.4.1.jar;C:\Users\maboxler\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\maboxler\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.21.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\io.netty\netty\bundles\netty-3.10.4.Final.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.4.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\com.zaxxer\HikariCP\bundles\HikariCP-2.3.7.jar;C:\Users\maboxler\.ivy2\cache\com.h2database\h2\jars\h2-1.4.187.jar;C:\Users\maboxler\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.9.21.jar;C:\Users\maboxler\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\maboxler\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\maboxler\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\maboxler\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\maboxler\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 2.845820743 s
+Attempting to call com.sun.tools.javac.api.JavacTool@5fcdf6b8 directly...
+Java compilation took 0.073857351 s
+Java analysis took 0.01059366 s
+Java compile + analysis took 0.090147657 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\maboxler\Desktop\Heroku\conf\application.conf,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\maboxler\Desktop\Heroku\conf\logback.xml,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\maboxler\Desktop\Heroku\conf\routes,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\routes)
+Total time: 4 s, completed 13.01.2016 15:37:37
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@4d6ce1d3, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452695619683) to lastModified(1452695857250)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala, C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Scala source and 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 3790268c, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes;C:\Users\maboxler\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar
+	-classpath
+	C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes;C:\Users\maboxler\Desktop\Heroku\lib\json-simple-1.1.1.jar;C:\Users\maboxler\Desktop\Heroku\lib\UChess.jar;C:\Users\maboxler\Desktop\Heroku\lib\UChess_Gut.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.1.1.jar;C:\Users\maboxler\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.4.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-enhancer\jars\play-enhancer-1.1.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe\config\bundles\config-1.3.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.8.1.jar;C:\Users\maboxler\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.7.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.6.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.3.jar;C:\Users\maboxler\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.13.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.13.jar;C:\Users\maboxler\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.10.jar;C:\Users\maboxler\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\maboxler\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\maboxler\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\maboxler\.ivy2\cache\com.google.inject\guice\jars\guice-4.0.jar;C:\Users\maboxler\.ivy2\cache\javax.inject\javax.inject\jars\javax.inject-1.jar;C:\Users\maboxler\.ivy2\cache\aopalliance\aopalliance\jars\aopalliance-1.0.jar;C:\Users\maboxler\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\jars\guice-assistedinject-4.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.3.0.jar;C:\Users\maboxler\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.15.jar;C:\Users\maboxler\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\maboxler\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\maboxler\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.1.Final.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.9.jar;C:\Users\maboxler\.ivy2\cache\com.google.guava\guava\bundles\guava-18.0.jar;C:\Users\maboxler\.ivy2\cache\com.google.code.findbugs\annotations\jars\annotations-2.0.1.jar;C:\Users\maboxler\.ivy2\cache\net.jodah\typetools\bundles\typetools-0.4.1.jar;C:\Users\maboxler\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\maboxler\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.21.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\io.netty\netty\bundles\netty-3.10.4.Final.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.4.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\com.zaxxer\HikariCP\bundles\HikariCP-2.3.7.jar;C:\Users\maboxler\.ivy2\cache\com.h2database\h2\jars\h2-1.4.187.jar;C:\Users\maboxler\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.9.21.jar;C:\Users\maboxler\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\maboxler\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\maboxler\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\maboxler\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\maboxler\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 1.223027316 s
+Attempting to call com.sun.tools.javac.api.JavacTool@c3fe34d directly...
+Java compilation took 0.080908801 s
+Java analysis took 0.011317093 s
+Java compile + analysis took 0.097830168 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\maboxler\Desktop\Heroku\conf\application.conf,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\maboxler\Desktop\Heroku\conf\logback.xml,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\maboxler\Desktop\Heroku\conf\routes,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\routes)
+Total time: 2 s, completed 13.01.2016 15:37:59
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@42fca6cc, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452695857250) to lastModified(1452695878802)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala, C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Scala source and 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 62a004f4, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes;C:\Users\maboxler\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar
+	-classpath
+	C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes;C:\Users\maboxler\Desktop\Heroku\lib\json-simple-1.1.1.jar;C:\Users\maboxler\Desktop\Heroku\lib\UChess.jar;C:\Users\maboxler\Desktop\Heroku\lib\UChess_Gut.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.1.1.jar;C:\Users\maboxler\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.4.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-enhancer\jars\play-enhancer-1.1.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe\config\bundles\config-1.3.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.8.1.jar;C:\Users\maboxler\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.7.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.6.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.3.jar;C:\Users\maboxler\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.13.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.13.jar;C:\Users\maboxler\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.10.jar;C:\Users\maboxler\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\maboxler\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\maboxler\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\maboxler\.ivy2\cache\com.google.inject\guice\jars\guice-4.0.jar;C:\Users\maboxler\.ivy2\cache\javax.inject\javax.inject\jars\javax.inject-1.jar;C:\Users\maboxler\.ivy2\cache\aopalliance\aopalliance\jars\aopalliance-1.0.jar;C:\Users\maboxler\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\jars\guice-assistedinject-4.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.3.0.jar;C:\Users\maboxler\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.15.jar;C:\Users\maboxler\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\maboxler\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\maboxler\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.1.Final.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.9.jar;C:\Users\maboxler\.ivy2\cache\com.google.guava\guava\bundles\guava-18.0.jar;C:\Users\maboxler\.ivy2\cache\com.google.code.findbugs\annotations\jars\annotations-2.0.1.jar;C:\Users\maboxler\.ivy2\cache\net.jodah\typetools\bundles\typetools-0.4.1.jar;C:\Users\maboxler\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\maboxler\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.21.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\io.netty\netty\bundles\netty-3.10.4.Final.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.4.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\com.zaxxer\HikariCP\bundles\HikariCP-2.3.7.jar;C:\Users\maboxler\.ivy2\cache\com.h2database\h2\jars\h2-1.4.187.jar;C:\Users\maboxler\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.9.21.jar;C:\Users\maboxler\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\maboxler\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\maboxler\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\maboxler\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\maboxler\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.969800247 s
+Attempting to call com.sun.tools.javac.api.JavacTool@3958c432 directly...
+Java compilation took 0.080068114 s
+Java analysis took 0.010844965 s
+Java compile + analysis took 0.096406316 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\maboxler\Desktop\Heroku\conf\application.conf,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\maboxler\Desktop\Heroku\conf\logback.xml,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\maboxler\Desktop\Heroku\conf\routes,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\routes)
+Total time: 2 s, completed 13.01.2016 15:39:29
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@2e7acd19, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452695878802) to lastModified(1452695969165)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala, C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala, C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala, C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Scala source and 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 959dd46, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes;C:\Users\maboxler\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar
+	-classpath
+	C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes;C:\Users\maboxler\Desktop\Heroku\lib\json-simple-1.1.1.jar;C:\Users\maboxler\Desktop\Heroku\lib\UChess.jar;C:\Users\maboxler\Desktop\Heroku\lib\UChess_Gut.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.1.1.jar;C:\Users\maboxler\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.4.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-enhancer\jars\play-enhancer-1.1.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe\config\bundles\config-1.3.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.8.1.jar;C:\Users\maboxler\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.7.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.6.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.3.jar;C:\Users\maboxler\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.13.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.13.jar;C:\Users\maboxler\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.10.jar;C:\Users\maboxler\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\maboxler\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\maboxler\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\maboxler\.ivy2\cache\com.google.inject\guice\jars\guice-4.0.jar;C:\Users\maboxler\.ivy2\cache\javax.inject\javax.inject\jars\javax.inject-1.jar;C:\Users\maboxler\.ivy2\cache\aopalliance\aopalliance\jars\aopalliance-1.0.jar;C:\Users\maboxler\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\jars\guice-assistedinject-4.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.3.0.jar;C:\Users\maboxler\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.15.jar;C:\Users\maboxler\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\maboxler\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\maboxler\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.1.Final.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.9.jar;C:\Users\maboxler\.ivy2\cache\com.google.guava\guava\bundles\guava-18.0.jar;C:\Users\maboxler\.ivy2\cache\com.google.code.findbugs\annotations\jars\annotations-2.0.1.jar;C:\Users\maboxler\.ivy2\cache\net.jodah\typetools\bundles\typetools-0.4.1.jar;C:\Users\maboxler\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\maboxler\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.21.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\io.netty\netty\bundles\netty-3.10.4.Final.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.4.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\com.zaxxer\HikariCP\bundles\HikariCP-2.3.7.jar;C:\Users\maboxler\.ivy2\cache\com.h2database\h2\jars\h2-1.4.187.jar;C:\Users\maboxler\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.9.21.jar;C:\Users\maboxler\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\maboxler\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\maboxler\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\maboxler\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\maboxler\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.643394164 s
+Attempting to call com.sun.tools.javac.api.JavacTool@7662266e directly...
+Read from stdout: C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java:53: cannot find symbol
+Read from stdout: symbol: variable field
+C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java:53: cannot find symbol
+  symbol: variable field
+Read from stdout: field
+field
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 1 s, completed 13.01.2016 15:41:11
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@764f990, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452695878802) to lastModified(1452695969165)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala, C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala, C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala, C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Scala source and 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 14783289, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes;C:\Users\maboxler\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar
+	-classpath
+	C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes;C:\Users\maboxler\Desktop\Heroku\lib\json-simple-1.1.1.jar;C:\Users\maboxler\Desktop\Heroku\lib\UChess.jar;C:\Users\maboxler\Desktop\Heroku\lib\UChess_Gut.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.1.1.jar;C:\Users\maboxler\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.4.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-enhancer\jars\play-enhancer-1.1.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe\config\bundles\config-1.3.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.8.1.jar;C:\Users\maboxler\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.7.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.6.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.5.4.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.12.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.3.jar;C:\Users\maboxler\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.13.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.13.jar;C:\Users\maboxler\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.10.jar;C:\Users\maboxler\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\maboxler\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\maboxler\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\maboxler\.ivy2\cache\com.google.inject\guice\jars\guice-4.0.jar;C:\Users\maboxler\.ivy2\cache\javax.inject\javax.inject\jars\javax.inject-1.jar;C:\Users\maboxler\.ivy2\cache\aopalliance\aopalliance\jars\aopalliance-1.0.jar;C:\Users\maboxler\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\jars\guice-assistedinject-4.0.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.3.0.jar;C:\Users\maboxler\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.15.jar;C:\Users\maboxler\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\maboxler\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\maboxler\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\maboxler\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.1.Final.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.1.6.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.9.jar;C:\Users\maboxler\.ivy2\cache\com.google.guava\guava\bundles\guava-18.0.jar;C:\Users\maboxler\.ivy2\cache\com.google.code.findbugs\annotations\jars\annotations-2.0.1.jar;C:\Users\maboxler\.ivy2\cache\net.jodah\typetools\bundles\typetools-0.4.1.jar;C:\Users\maboxler\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\maboxler\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.21.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\io.netty\netty\bundles\netty-3.10.4.Final.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.4.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\maboxler\.ivy2\cache\com.zaxxer\HikariCP\bundles\HikariCP-2.3.7.jar;C:\Users\maboxler\.ivy2\cache\com.h2database\h2\jars\h2-1.4.187.jar;C:\Users\maboxler\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.4.3.jar;C:\Users\maboxler\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.9.21.jar;C:\Users\maboxler\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\maboxler\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\maboxler\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\maboxler\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\maboxler\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.607689353 s
+Attempting to call com.sun.tools.javac.api.JavacTool@3e7a9ea2 directly...
+Java compilation took 0.074127938 s
+Java analysis took 0.009421736 s
+Java compile + analysis took 0.088918505 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 13.01.2016 15:41:22
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@78403bd, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452695969165) to lastModified(1452696082535)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@6a2df60a directly...
+Java compilation took 0.166019174 s
+Java analysis took 0.011003896 s
+Java compile + analysis took 0.184219767 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\maboxler\Desktop\Heroku\conf\application.conf,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\maboxler\Desktop\Heroku\conf\logback.xml,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\maboxler\Desktop\Heroku\conf\routes,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 13.01.2016 15:41:25
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@65f8cffe, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696082535) to lastModified(1452696085528)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@134edb5 directly...
+Java compilation took 0.090436283 s
+Java analysis took 0.010400206 s
+Java compile + analysis took 0.107400571 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 0 s, completed 13.01.2016 15:42:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@40de90f0, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696085528) to lastModified(1452696158320)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@8f4e827 directly...
+Java compilation took 0.086463 s
+Java analysis took 0.009986237 s
+Java compile + analysis took 0.10188245 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\maboxler\Desktop\Heroku\conf\application.conf,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\maboxler\Desktop\Heroku\conf\logback.xml,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\maboxler\Desktop\Heroku\conf\routes,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 13.01.2016 15:42:47
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@4fddafbd, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696158320) to lastModified(1452696166781)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@7d0ae730 directly...
+Read from stdout: C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java:66: variable t is already defined in method onReady(play.mvc.WebSocket.In<java.lang.String>,play.mvc.WebSocket.Out<java.lang.String>)
+C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java:66: variable t is already defined in method onReady(play.mvc.WebSocket.In<java.lang.String>,play.mvc.WebSocket.Out<java.lang.String>)
+Read from stdout: String t = tui.getFigures();
+String t = tui.getFigures();
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 0 s, completed 13.01.2016 15:43:34
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@406f846e, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696158320) to lastModified(1452696166781)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@2592de79 directly...
+Java compilation took 0.079007223 s
+Java analysis took 0.010390253 s
+Java compile + analysis took 0.09639201 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 0 s, completed 13.01.2016 15:43:48
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1f08df78, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696166781) to lastModified(1452696228617)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@6e950e97 directly...
+Java compilation took 0.085057811 s
+Java analysis took 0.01910815 s
+Java compile + analysis took 0.121249679 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\maboxler\Desktop\Heroku\conf\application.conf,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\maboxler\Desktop\Heroku\conf\logback.xml,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\maboxler\Desktop\Heroku\conf\routes,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 13.01.2016 15:43:52
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@381d6e75, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696228617) to lastModified(1452696231998)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@6964eb7d directly...
+Java compilation took 0.110144702 s
+Java analysis took 0.009794027 s
+Java compile + analysis took 0.125824475 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 0 s, completed 13.01.2016 15:45:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@5ad49a8, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696231998) to lastModified(1452696338736)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@729c96c8 directly...
+Java compilation took 0.078559666 s
+Java analysis took 0.010358218 s
+Java compile + analysis took 0.095519909 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\maboxler\Desktop\Heroku\conf\application.conf,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\maboxler\Desktop\Heroku\conf\logback.xml,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\maboxler\Desktop\Heroku\conf\routes,C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 13.01.2016 15:45:41
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 1
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@6055a024, check cycles: false
+Total time: 0 s, completed 13.01.2016 15:46:29
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@18bc2443, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696338736) to lastModified(1452696341384)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@2389ca84 directly...
+Java compilation took 0.064199862 s
+Java analysis took 0.010051551 s
+Java compile + analysis took 0.081048138 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 0 s, completed 13.01.2016 15:46:34
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@33dab5c8, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696341384) to lastModified(1452696393970)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@5ff7ff62 directly...
+
+Canceling execution...
+Java compilation took 0.0649432 s
+Java analysis took 0.010987412 s
+Java compile + analysis took 0.080755157 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Task java.util.concurrent.ExecutorCompletionService$QueueingFuture@316c8493 rejected from java.util.concurrent.ThreadPoolExecutor@79ea3932[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 125]
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ExecutorCompletionService$QueueingFuture@316c8493 rejected from java.util.concurrent.ThreadPoolExecutor@79ea3932[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 125]
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@24efa2c6, check cycles: false
+registered more than once? Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/C:/Users/maboxler/Desktop/Heroku/,root)),Select(ConfigKey(compile)),Global,Global),compile)))
+registered more than once? Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/C:/Users/maboxler/Desktop/Heroku/,root)),Select(ConfigKey(compile)),Global,Global),compile)))
+Use 'last' for the full log.
+> server-post-command-error-handler
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/maboxler/Desktop/Heroku/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@3cc06ae5, check cycles: false
-Total time: 0 s, completed 13.01.2016 10:07:59
+Running task... Cancel: sbt.server.ServerTaskCancellation@5206a651, check cycles: false
+Total time: 0 s, completed 13.01.2016 15:47:02
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@3f60de7e, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696341384) to lastModified(1452696399792)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application$1.class)
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@10d44aff directly...
+Java compilation took 0.170709359 s
+Java analysis took 0.009764169 s
+Java compile + analysis took 0.185960236 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 13.01.2016 15:47:03
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@221c6038, check cycles: false
+Total time: 0 s, completed 13.01.2016 15:47:03
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/maboxler/Desktop/Heroku/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@e64c751, check cycles: false
+Invalidating C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1452696399792) to lastModified(1452696423214)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\maboxler\Desktop\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\maboxler\Desktop\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@1faad5b6 directly...
+Java compilation took 0.334652474 s
+Java analysis took 0.021514824 s
+Java compile + analysis took 0.361677643 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 13.01.2016 15:47:04
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -179,4 +979,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 4248@3dlab8 logs at Wed Jan 13 10:07:59 CET 2016, goodbye.
+Closing the 6580@3dlab1 logs at Wed Jan 13 15:47:04 CET 2016, goodbye.
