@@ -45,17 +45,18 @@
         $socket.onmessage = function(message){ 
         	        	
         	var msg = JSON.parse(message.data);
-        	if(msg.type == "field"){
+        	$scope.figures = msg.figures;
+        	/*if(msg.type == "field"){
         		$scope.figures = msg.figures;
         	} elseif(msg.type == "endofgame"){
         		alert(msg.winner + " has won the game!");
-        		/*
+        		
         		{
         			"type": "endofgame",
         			"winner": "username"
         		}
-        		*/
-        	}
+        		
+        	}*/
         }; 
         $socket.onerror   = function(){ alert("Fehler aufgetrreten"); };  
         $socket.onclose   = function(){ alert("Server hat verbindung beendet");};
