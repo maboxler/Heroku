@@ -80,3 +80,9 @@ Taking next connection to: 59356
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
 Taking next connection to: 59356
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 4424@3dlab1 logs at Wed Jan 13 15:54:58 CET 2016, goodbye.
