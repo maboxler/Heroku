@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en" ng-app="chessApp">
     <head>
-    
-        <title>Wui</title>
+        <title>UChess Angular</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
  
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 		
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
-		<link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
-		
 		<style>
-
 		    .field {
                 display: block;
 		        float: left;
@@ -25,205 +19,88 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-        
-        
-        
-        
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
-         
-    <script>   
-    
-    var i = 1;
-    var endpos = "";
-    var str1 = "";
-
-    var chessApp = angular.module('chessApp', []);
-    chessApp.controller('ChessCtrl', function ($scope){
-    	var $socket = new WebSocket("ws://localhost:9000/socket");
-        //$scope.socket = new WebSocket("ws://uchess.herokuapp.com/socket"); 
-        $socket.onopen    = function(){ 
-		document.getElementById('resetB').style.display = 'none';
-		alert("Mit Socket verbunden"); };  
-        $socket.onmessage = function(message){ 			
-			
-			switch(message.data) {
-				case "Winner":
-					alert("Game Over");
-					break;
-				case "black":
-					document.getElementById("playerturn").firstChild.nodeValue = "It´s Black Turn";
-					break;
-				case "white":
-					document.getElementById("playerturn").firstChild.nodeValue = "It´s White Turn";
-					break;
-				default:
-					var msg = JSON.parse(message.data);
-					$scope.figures = msg.figures;
-					$scope.$apply();
-			} 
-			
-			console.log(" Server: " + message.data);
-        		
-        	
-        	
-        	/*if(msg.type == "field"){
-        		$scope.figures = msg.figures;
-        	} elseif(msg.type == "endofgame"){
-        		alert(msg.winner + " has won the game!");
-        		
-        		{
-        			"type": "endofgame",
-        			"winner": "username"
-        		}
-        		
-        	}*/
-        }; 
-        $socket.onerror   = function(){ alert("Fehler aufgetrreten"); };  
-        $socket.onclose   = function(){ alert("Server hat verbindung beendet");};
-    		
-        angular.element(document).ready(function () {
-        	$scope.$apply();
-        });
-       
-        
-        $scope.getField = function() {
-			
-        	$socket.send("field"); 	
-			document.getElementById("startB").style.display='none';
-			document.getElementById("resetB").style.display='block';
-        };
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    	<script>   
+		    var i = 1;
+		    var endpos = "";
+		    var str1 = "";
 		
-		$scope.reset = function() {
-        	$socket.send("reset"); 	
-        };
-        
-        
-    	$scope.move = function(pos) {
-    		
-    		
-			if(i == 1) {
-	    		str1 = pos;
-	    		document.getElementById("click").firstChild.nodeValue = "1 Feld gedrueckt";
-
-			}
-			
-			if(i == 2) {
-				endpos = str1 + " " + pos;
-    		
-    			console.log("send pos " + endpos);
-    			$socket.send(endpos);
-    			i = 0;
-    			str1 = "";
-    			endpos = "";
-    			document.getElementById("click").firstChild.nodeValue = "0 Felder gedrueckt";
-    		}
-						
-			i = i + 1;
-        };
-               
-        
-      $scope.figures = [/*
-        		{"figure": "T", "color": "b", "bg": "w", "pos": "07"},
-            	{"figure": "H", "color": "b", "bg": "b", "pos": "17"},
-            	{"figure": "B", "color": "b", "bg": "w", "pos": "27"},
-            	{"figure": "Q", "color": "b", "bg": "b", "pos": "37"},
-            	{"figure": "K", "color": "b", "bg": "w", "pos": "47"},
-            	{"figure": "B", "color": "b", "bg": "b", "pos": "57"},
-            	{"figure": "H", "color": "b", "bg": "w", "pos": "67"},
-            	{"figure": "T", "color": "b", "bg": "b", "pos": "77"},
-            	
-            	{"figure": "P", "color": "b", "bg": "b", "pos": "06"},
-            	{"figure": "P", "color": "b", "bg": "w", "pos": "16"},
-            	{"figure": "P", "color": "b", "bg": "b", "pos": "26"},
-            	{"figure": "P", "color": "b", "bg": "w", "pos": "36"},
-            	{"figure": "P", "color": "b", "bg": "b", "pos": "46"},
-            	{"figure": "P", "color": "b", "bg": "w", "pos": "56"},
-            	{"figure": "P", "color": "b", "bg": "b", "pos": "66"},
-            	{"figure": "P", "color": "b", "bg": "w", "pos": "76"},
-            	
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "05"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "15"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "25"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "35"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "45"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "55"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "65"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "75"},
-            	
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "04"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "14"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "24"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "34"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "44"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "54"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "64"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "74"},
-                
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "03"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "13"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "23"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "33"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "43"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "53"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "63"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "73"},
-            	
-            	
-            	
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "02"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "12"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "22"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "32"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "42"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "52"},
-            	{"figure": "x", "color": "x", "bg": "b", "pos": "62"},
-            	{"figure": "x", "color": "x", "bg": "w", "pos": "72"},
-
-            	{"figure": "P", "color": "w", "bg": "w", "pos": "01"},
-            	{"figure": "P", "color": "w", "bg": "b", "pos": "11"},
-            	{"figure": "P", "color": "w", "bg": "w", "pos": "21"},
-            	{"figure": "P", "color": "w", "bg": "b", "pos": "31"},
-            	{"figure": "P", "color": "w", "bg": "w", "pos": "41"},
-            	{"figure": "P", "color": "w", "bg": "b", "pos": "51"},
-            	{"figure": "P", "color": "w", "bg": "w", "pos": "61"},
-            	{"figure": "P", "color": "w", "bg": "b", "pos": "71"},
-            	
-            	
-            	{"figure": "T", "color": "w", "bg": "b", "pos": "00"},
-            	{"figure": "H", "color": "w", "bg": "w", "pos": "10"},
-            	{"figure": "B", "color": "w", "bg": "b", "pos": "20"},
-            	{"figure": "Q", "color": "w", "bg": "w", "pos": "30"},
-            	{"figure": "K", "color": "w", "bg": "b", "pos": "40"},
-            	{"figure": "B", "color": "w", "bg": "w", "pos": "50"},
-            	{"figure": "H", "color": "w", "bg": "b", "pos": "60"},
-            	{"figure": "T", "color": "w", "bg": "w", "pos": "70"}*/
-      ];
-      
-
-      
-      
-    });
-    
-    
-	      
-    </script>
-        
-        
-        
-        
+		    var chessApp = angular.module('chessApp', []);
+		    chessApp.controller('ChessCtrl', function ($scope){
+		    	$scope.figures = [];
+		    	$scope.enableRestart = false;
+		    	var address = window.location.origin.replace("http", "ws");
+		    	var $socket = new WebSocket(address + "/socket");
+		        $socket.onopen = function(){};
+				$socket.onmessage = function(message){ 			
+					switch(message.data) {
+						case "WAIT":
+							$scope.status = "Waiting for opponent!";
+							break;
+						case "QUIT":
+							$socket.close();
+							if(confirm("Your opponent left the game! Go back to home.")){
+								window.location = '/';
+							}
+							break;
+						case "WINNER black":
+						case "WINNER white":
+							alert(message.data.substr(message.data.length - 5) + " has won the game");
+							break;
+						case "black":
+							$scope.status = "It´s Black Turn";
+							break;
+						case "white":
+							$scope.status = "It´s White Turn";
+							break;
+						default:
+							var msg = JSON.parse(message.data);
+							$scope.figures = msg.figures;
+							$scope.$apply();
+					}
+		        }; 
+		        $socket.onerror = function(){
+		        	alert("Error occurred!");
+		        };  
+		        $socket.onclose = function(){};
+		    		
+// 		        angular.element(document).ready(function () {
+// 		        	$scope.$apply();
+// 		        });
+				
+				$scope.reset = function() {
+		        	$socket.send("RESET"); 	
+		        };
+		        
+		    	$scope.move = function(pos) {
+		    		if(i == 1) {
+			    		str1 = pos;
+			    		$scope.click = "1 Feld gedrueckt";
+					} else if(i == 2) {
+						endpos = str1 + " " + pos;
+		    			console.log("send pos " + endpos);
+		    			$socket.send(endpos);
+		    			i = 0;
+		    			str1 = "";
+		    			endpos = "";
+		    			$scope.click = "0 Felder gedrueckt";
+		    		}
+					i = i + 1;
+		        };            
+		    });
+    	</script>   
     </head>
     <body ng-controller="ChessCtrl">
     	<ul>
-		<span id="playerturn"> </span>
     		<span ng-repeat="figur in figures">
-    		<div ng-if="($index % 8) == 0" class="row"></div>
-    		<img ng-src="/assets/images/{{figur.color}}{{figur.figure}}{{figur.bg}}.jpg" ng-click="move(figur.pos)" class="field"/>
-    		
+	    		<div ng-if="($index % 8) == 0" class="row"></div>
+	    		<img ng-src="/assets/images/{{figur.color}}{{figur.figure}}{{figur.bg}}.jpg" ng-click="move(figur.pos)" class="field"/>
     		</span>
     	</ul>
-     
-    	<span id="click"> </span>
-    	 <button id="startB" ng-click="getField()">Start Game</button>
-		 <button id="resetB" ng-click="reset()" style.visibility="hidden">Reset Game</button> 
+    	<div id="control">
+    		<label for="status">Status: </label><span id="status">{{status}}</span><br />
+    		<label for="click">Clicks: </label><span id="click">{{click}}</span><br />
+    		<button id="resetB" ng-click="reset()" ng-if="enableRestart">Gegner erneut herausfordern!</button> 
+    	</div>
     </body>
 </html>

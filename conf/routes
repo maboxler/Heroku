@@ -4,11 +4,7 @@
 
 # Home page
 GET     /                           controllers.Application.index()
-GET     /wtui						controllers.Application.game()
-GET     /reset						controllers.Application.reset()
-GET     /move/:command              controllers.Application.move(command:String)
-GET     /wui                        controllers.Application.wui()
-GET     /wuii                       controllers.Application.wuii() 
+GET     /game                       controllers.Application.game() 
 GET     /socket                     controllers.Application.webSocket()
 
 # Map static resources from the /public folder to the /assets URL path
