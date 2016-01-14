@@ -1,6 +1,7 @@
 package controllers;
 
 import htwg.se.chess.Init;
+import htwg.se.controller.Icontroller;
 import htwg.se.view.TUI;
 import play.*;
 import play.mvc.*;
@@ -12,7 +13,9 @@ import play.libs.F.Callback0;
 public class Application extends Controller {
 
 	TUI tui = Init.getInstance().getTui();
-
+	Icontroller controller = tui.getTuiController();
+	String gamefield;
+	
 	public Result index() {
 		// Init.main(null); //ruft Spiel auf
 		return ok(index.render("UChess Titel"));
@@ -50,32 +53,40 @@ public class Application extends Controller {
 			public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
 				in.onMessage(event -> {
 					
-					System.out.println(event);
-
-					if (event.equals("field")) {
-						System.out.println("event: \n" + event);
-						String x = tui.getFigures();
-						System.out.println("SPIELFELD:\n");
-						System.out.println(x);
+					
+					switch(event) {
+					case "field":	
+						String x = tui.getFigures();	
 						out.write(x);
-					}
-
-					if (event.charAt(0) == '_') {
-						System.out.println("event: \n" + event);
-						tui.processInputLine(event.substring(1));
-						String t = tui.getFigures();
-						System.out.println("MOVE wurde gesendet:\n");
-						System.out.println("SPIELFELD:\n");
-						System.out.println(t);
-						out.write(t);
-					}
+						break;
+					case "reset":	
+						Init.getInstance().getCc().reset();
+						gamefield = tui.getFigures();
+						out.write(controller.getStatusMessage());
+						out.write(gamefield);
+						break;	
+					default:	
+						tui.processInputLine(event);
+						gamefield = tui.getFigures();						
+						if(controller.checkWin()) {
+							out.write("Winner");
+						}
+						else {
+							out.write(controller.getStatusMessage());
+							out.write(gamefield);
+						}
+					}					
 
 				});
 				in.onClose(() -> {
+					Init.getInstance().getCc().reset();
+					System.out.println("reset erfolgreich");
+					tui = Init.getInstance().getTui();
+					controller = tui.getTuiController();
 					System.out.println("USER CLOSED CONNECTION:");
 				});
 			}
 		};
-	}
+}
 
 }

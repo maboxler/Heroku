@@ -41,18 +41,29 @@
     chessApp.controller('ChessCtrl', function ($scope){
     	var $socket = new WebSocket("ws://localhost:9000/socket");
         //$scope.socket = new WebSocket("ws://uchess.herokuapp.com/socket"); 
-        $socket.onopen    = function(){ alert("Mit Socket verbunden"); };  
-        $socket.onmessage = function(message){ 
-        	
-        	if(message == "x") {
-        		console.log("x msg");
-        	} else {
-        		var msg = JSON.parse(message.data);
-            	$scope.figures = msg.figures;
-            	$scope.$apply();
-            	console.log($scope.figures);
+        $socket.onopen    = function(){ 
+		document.getElementById('resetB').style.display = 'none';
+		alert("Mit Socket verbunden"); };  
+        $socket.onmessage = function(message){ 			
+			
+			switch(message.data) {
+				case "Winner":
+					alert("Game Over");
+					break;
+				case "black":
+					document.getElementById("playerturn").firstChild.nodeValue = "It´s Black Turn";
+					break;
+				case "white":
+					document.getElementById("playerturn").firstChild.nodeValue = "It´s White Turn";
+					break;
+				default:
+					var msg = JSON.parse(message.data);
+					$scope.figures = msg.figures;
+					$scope.$apply();
+			} 
+			
+			console.log(" Server: " + message.data);
         		
-        	}
         	
         	
         	/*if(msg.type == "field"){
@@ -76,7 +87,14 @@
        
         
         $scope.getField = function() {
+			
         	$socket.send("field"); 	
+			document.getElementById("startB").style.display='none';
+			document.getElementById("resetB").style.display='block';
+        };
+		
+		$scope.reset = function() {
+        	$socket.send("reset"); 	
         };
         
         
@@ -93,7 +111,7 @@
 				endpos = str1 + " " + pos;
     		
     			console.log("send pos " + endpos);
-    			$socket.send("_"+endpos);
+    			$socket.send(endpos);
     			i = 0;
     			str1 = "";
     			endpos = "";
@@ -196,6 +214,7 @@
     </head>
     <body ng-controller="ChessCtrl">
     	<ul>
+		<span id="playerturn"> </span>
     		<span ng-repeat="figur in figures">
     		<div ng-if="($index % 8) == 0" class="row"></div>
     		<img ng-src="/assets/images/{{figur.color}}{{figur.figure}}{{figur.bg}}.jpg" ng-click="move(figur.pos)" class="field"/>
@@ -203,7 +222,8 @@
     		</span>
     	</ul>
      
-    	<span id="click">0 Felder gedrueckt</span>
-    	 <button ng-click="getField()">draw Field</button> 
+    	<span id="click"> </span>
+    	 <button id="startB" ng-click="getField()">Start Game</button>
+		 <button id="resetB" ng-click="reset()" style.visibility="hidden">Reset Game</button> 
     </body>
 </html>
