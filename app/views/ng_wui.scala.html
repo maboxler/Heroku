@@ -8,12 +8,45 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 		
 		<style>
-		    .field {
+			.field {
+				float: none;
+				margin: 20px auto;
+			}
+		    .cell {
                 display: block;
 		        float: left;
-		        width:  5%;
-		        height: 5%;
+		        width:  12.5%;
+		        height: 12.5%;
                 margin: 0px;
+		    }
+		    #control {
+		    	display: block;
+		        float: left;
+		    	background-color: #F456D8;
+		    	border-radius: 10px;
+		    	padding: 10px;
+		    }
+		    
+		    @media screen and (max-width: 992px){
+		    	#control {
+		    		margin-top: 10px;
+		    	}
+		    }
+		    
+		    #chat > div > span {
+		    	margin: 3px;
+		    	padding: 5px;
+		    	border-radius: 5px;
+		    	width: 100%;
+		    	display:block;
+		    }
+		    .chat-me {
+		    	text-align: right;
+		    	background-color: #B98426;
+		    }
+		    .chat-other {
+		    	text-align: left;
+		    	background-color: #D7823A;
 		    }
 		</style>
 		<!-- Latest compiled and minified JavaScript -->
@@ -29,15 +62,24 @@
 		    chessApp.controller('ChessCtrl', function ($scope){
 		    	$scope.figures = [];
 		    	$scope.enableRestart = false;
+		    	$scope.messages = [];
+		    	$scope.chat = "";
 		    	var address = window.location.origin.replace("http", "ws");
 		    	var $socket = new WebSocket(address + "/socket");
 		        $socket.onopen = function(){};
 				$socket.onmessage = function(message){ 			
+					console.log(message.data);
+					if(typeof message.data === "string" && message.data.substr(0,4) === "CHAT"){
+						$scope.messages.push({"type": "other", "msg": message.data.substr(6)});
+						$scope.$apply();
+						return;
+					}
 					switch(message.data) {
 						case "WAIT":
 							$scope.status = "Waiting for opponent!";
 							break;
 						case "QUIT":
+							$scope.enableChat = false;
 							$socket.close();
 							if(confirm("Your opponent left the game! Go back to home.")){
 								window.location = '/';
@@ -45,6 +87,7 @@
 							break;
 						case "WINNER black":
 						case "WINNER white":
+							$scope.enableRestart = true;
 							alert(message.data.substr(message.data.length - 5) + " has won the game");
 							break;
 						case "black":
@@ -54,10 +97,11 @@
 							$scope.status = "It´s White Turn";
 							break;
 						default:
+							$scope.enableChat = true;
 							var msg = JSON.parse(message.data);
 							$scope.figures = msg.figures;
-							$scope.$apply();
 					}
+					$scope.$apply();
 		        }; 
 		        $socket.onerror = function(){
 		        	alert("Error occurred!");
@@ -69,7 +113,8 @@
 // 		        });
 				
 				$scope.reset = function() {
-		        	$socket.send("RESET"); 	
+		        	$socket.send("RESET");
+		        	$scope.enableRestart = false;		        	
 		        };
 		        
 		    	$scope.move = function(pos) {
@@ -86,21 +131,36 @@
 		    			$scope.click = "0 Felder gedrueckt";
 		    		}
 					i = i + 1;
-		        };            
+		        };
+		        $scope.sendMessage = function(msg){
+		        	$socket.send("CHAT " + msg);
+		        	$scope.messages.push({"type": "me", "msg": msg});
+		        	$scope.chat = "";
+		        	
+		        };
 		    });
     	</script>   
     </head>
     <body ng-controller="ChessCtrl">
-    	<ul>
-    		<span ng-repeat="figur in figures">
-	    		<div ng-if="($index % 8) == 0" class="row"></div>
-	    		<img ng-src="/assets/images/{{figur.color}}{{figur.figure}}{{figur.bg}}.jpg" ng-click="move(figur.pos)" class="field"/>
-    		</span>
-    	</ul>
-    	<div id="control">
-    		<label for="status">Status: </label><span id="status">{{status}}</span><br />
-    		<label for="click">Clicks: </label><span id="click">{{click}}</span><br />
-    		<button id="resetB" ng-click="reset()" ng-if="enableRestart">Gegner erneut herausfordern!</button> 
-    	</div>
+    	<div class="field col-md-8">
+	    	<div class="col-md-9">
+	    		<span ng-repeat="figur in figures">
+		    		<img ng-src="/assets/images/{{figur.color}}{{figur.figure}}{{figur.bg}}.jpg" ng-click="move(figur.pos)" class="cell"/>
+	    		</span>
+	    	</div>
+	    	<div id="control" class="col-md-3">
+	    		<label for="status">Status: </label><span id="status"> {{status}}</span><br />
+	    		<label for="click">Clicks: </label><span id="click"> {{click}}</span><br />
+	    		<button id="resetB" ng-click="reset()" ng-if="enableRestart">Gegner erneut herausfordern!</button> 
+	    		<div ng-if="enableChat" id="chat">
+	    			<h3>Chat:</h3>
+	    			<input type="textarea" ng-model="chat" />
+	    			<button ng-click="sendMessage(chat)">Send</button>
+	    			<div>
+	    				<span ng-repeat="msg in messages" ng-class="{'chat-me': msg.type == 'me', 'chat-other': msg.type == 'other'}">{{msg.type}}: {{msg.msg}}</span>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
     </body>
 </html>

@@ -27,7 +27,6 @@ public class Application extends Controller {
 		return new WebSocket<String>() {
 			public void onReady(WebSocket.In<String> in, WebSocket.Out<String>  out) {
 				if(playerList.isEmpty()) {
-					out.write("WAIT");
 					game = new GameInstance(out);
 					playerList.add(out);
 				}
@@ -37,18 +36,21 @@ public class Application extends Controller {
 				}
 				
 				in.onMessage(event -> {
-					
-					switch(event) {
-					case "RESET":	
-						game.reset(false);
-						break;	
+					System.out.println(event);
+					switch(event.substring(0, 4)) {
+					case "RESE":	
+						game.reset(false, out);
+						break;
+					case "CHAT":
+						game.chat(event, out);
+						break;
 					default:	
 						game.move(event, out);
 					}					
 
 				});
 				in.onClose(() -> {
-					game.reset(true);
+					game.reset(true, out);
 					System.out.println("USER CLOSED CONNECTION:");
 				});
 			}
