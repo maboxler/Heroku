@@ -1,13 +1,13 @@
-New log file opened at Fri Jan 15 19:59:47 CET 2016 by 1548@3dlab1
-Taking next connection to: 58169
-New client attempting to connect on port: 58172-58169
-  Address = /141.37.31.51:58169
-This client on port 58172 has uuid eaa3b4b0-11cd-4aa3-a710-de0b5eb74d79 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-eaa3b4b0-11cd-4aa3-a710-de0b5eb74d79
-Taking next connection to: 58169
-New client attempting to connect on port: 58173-58169
-  Address = /141.37.31.51:58169
-Handshake exception on socket: 58173
+New log file opened at Sun Jan 17 17:31:53 CET 2016 by 6500@PhantomPain
+Taking next connection to: 50648
+New client attempting to connect on port: 50649-50648
+  Address = /192.168.2.108:50648
+This client on port 50649 has uuid 342c8d7e-8840-45ae-9a3d-90da10c20d91 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-342c8d7e-8840-45ae-9a3d-90da10c20d91
+Taking next connection to: 50648
+New client attempting to connect on port: 50650-50648
+  Address = /192.168.2.108:50648
+Handshake exception on socket: 50650
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -23,45 +23,9 @@ Caused by: java.net.SocketException: Software caused connection abort: recv fail
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 58169
-New client attempting to connect on port: 58174-58169
-  Address = /141.37.31.51:58169
-This client on port 58174 has uuid d21d5d95-1238-4c38-ad2d-0ce4f0792e8b configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-eaa3b4b0-11cd-4aa3-a710-de0b5eb74d79, activator-d21d5d95-1238-4c38-ad2d-0ce4f0792e8b
-Taking next connection to: 58169
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58169
-New client attempting to connect on port: 58236-58169
-  Address = /141.37.31.51:58169
-Handshake exception on socket: 58236
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Software caused connection abort: recv failed
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:170)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readInt(DataInputStream.java:387)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 58169
-New client attempting to connect on port: 58237-58169
-  Address = /141.37.31.51:58169
-This client on port 58237 has uuid dd4e526d-26fa-4819-9ad3-10e13b481752 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-d21d5d95-1238-4c38-ad2d-0ce4f0792e8b, play-fork-run-dd4e526d-26fa-4819-9ad3-10e13b481752
-Taking next connection to: 58169
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58169
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58169
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58169
+Taking next connection to: 50648
+New client attempting to connect on port: 50651-50648
+  Address = /192.168.2.108:50648
+This client on port 50651 has uuid fe259834-c337-4055-81c1-8aaa7017e826 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-342c8d7e-8840-45ae-9a3d-90da10c20d91, activator-fe259834-c337-4055-81c1-8aaa7017e826
+Taking next connection to: 50648

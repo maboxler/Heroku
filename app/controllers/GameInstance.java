@@ -25,10 +25,12 @@ public class GameInstance {
 	}
 	
 	public void chat(String msg, Out<String> sender){
-		Out<String> receiver = sender.equals(player1) ? player2 : player1;
-		System.out.println("chatting");
-		System.out.println(receiver);
-		receiver.write(msg);
+		if(existPlayer2()) {
+			Out<String> receiver = sender.equals(player1) ? player2 : player1;
+			System.out.println("chatting");
+			System.out.println(receiver);
+			receiver.write(msg);
+		}
 	}
 	
 	public void reset(boolean force, Out<String> sender) {
@@ -51,7 +53,7 @@ public class GameInstance {
 	}
 	
 	public void move(String command, Out<String> sender) {
-		if(checkPlayersTurn(sender)){
+		if(checkPlayersTurn(sender) && existPlayer2()){
 			if(controller.move(command)) {
 				send(controller.getStatusMessage());
 				send(controller.getField());
@@ -91,6 +93,10 @@ public class GameInstance {
 		return controller;
 	}
 
-	
+	public boolean existPlayer2() {
+		if(player2 == null)
+			return false;
+		return true;
+	}
 
 }

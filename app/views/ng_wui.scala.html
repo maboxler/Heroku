@@ -22,11 +22,14 @@
 		    #control {
 		    	display: block;
 		        float: left;
-		    	background-color: #F456D8;
+		    	background-color: #D9D1C6;
 		    	border-radius: 10px;
 		    	padding: 10px;
 		    }
 		    
+		    body {
+                background-image: url("bg.jpg");
+            } 
 		  
 		    
 		    #chat > div > span {
@@ -38,11 +41,11 @@
 		    }
 		    .chat-me {
 		    	text-align: right;
-		    	background-color: #B98426;
+		    	background-color: #FFFFFD;
 		    }
-		    .chat-other {
+		    .chat-opponent {
 		    	text-align: left;
-		    	background-color: #D7823A;
+		    	background-color: #E3FFC8;
 		    }
 		</style>
 		<!-- Latest compiled and minified JavaScript -->
@@ -56,8 +59,10 @@
 		
 		    var chessApp = angular.module('chessApp', []);
 		    chessApp.controller('ChessCtrl', function ($scope){
+		        $scope.bodyStyle = {background: "/assets/images/bg.jpg"") no-repeat center center fixed"};
 		    	$scope.figures = [];
 		    	$scope.enableRestart = false;
+		    	$scope.event;
 		    	$scope.messages = [];
 		    	$scope.chat = "";
 		    	var address = window.location.origin.replace("http", "ws");
@@ -66,7 +71,7 @@
 				$socket.onmessage = function(message){ 			
 					console.log(message.data);
 					if(typeof message.data === "string" && message.data.substr(0,4) === "CHAT"){
-						$scope.messages.push({"type": "other", "msg": message.data.substr(6)});
+						$scope.messages.push({"type": "Opponent", "msg": message.data.substr(6)});
 						$scope.$apply();
 						return;
 					}
@@ -112,7 +117,7 @@
 		        	$socket.send("RESET");
 		        	$scope.enableRestart = false;		        	
 		        };
-		        
+		        		        
 		    	$scope.move = function(pos) {
 		    		if(i == 1) {
 			    		str1 = pos;
@@ -125,19 +130,28 @@
 		    			str1 = "";
 		    			endpos = "";
 		    			$scope.click = "0 Felder gedrueckt";
-		    		}
+		    		}https://www.google.de/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwi-veT6hrDKAhXFBywKHfGSDLUQFggoMAE&url=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F24899699%2Fhow-to-set-background-image-of-div-with-ng-style&usg=AFQjCNGBBh4aQYEPT4MRYGL2V28oKh82bw&sig2=9WPgcWQ80WnTbGsggz2V3Q
 					i = i + 1;
 		        };
+		        
 		        $scope.sendMessage = function(msg){
-		        	$socket.send("CHAT " + msg);
-		        	$scope.messages.push({"type": "me", "msg": msg});
-		        	$scope.chat = "";
+			        	  	$socket.send("CHAT  " + msg);
+				        	$scope.messages.push({"type": "Me", "msg": msg});
+				        	$scope.chat = null;		        	
+		        };
+		        
+		        $scope.sendMessage2 = function(keyEvent, msg){
+		        	 if (keyEvent.which === 13) {
+			        	  	$socket.send("CHAT  " + msg);
+				        	$scope.messages.push({"type": "Me", "msg": msg});
+				        	$scope.chat = null;
+		        	  }
 		        	
 		        };
 		    });
     	</script>   
     </head>
-    <body ng-controller="ChessCtrl">
+    <body ng-controller="ChessCtrl" ng-style="bodyStyle">
     	<div class="field col-md-8">
 	    	<div class="col-md-9">
 	    		<span ng-repeat="figur in figures">
@@ -150,10 +164,10 @@
 	    		<button id="resetB" ng-click="reset()" ng-if="enableRestart">Gegner erneut herausfordern!</button> 
 	    		<div ng-if="enableChat" id="chat">
 	    			<h3>Chat:</h3>
-	    			<input type="textarea" ng-model="chat" />
+	    			<input type="textarea" ng-model="chat" ng-keypress="sendMessage2($event, chat)"/>
 	    			<button ng-click="sendMessage(chat)">Send</button>
 	    			<div>
-	    				<span ng-repeat="msg in messages" ng-class="{'chat-me': msg.type == 'me', 'chat-other': msg.type == 'other'}">{{msg.type}}: {{msg.msg}}</span>
+	    				<span ng-repeat="msg in messages" ng-class="{'chat-me': msg.type == 'Me', 'chat-opponent': msg.type == 'Opponent'}">{{msg.type}}: {{msg.msg}}</span>
 	    			</div>
 	    		</div>
 	    	</div>
