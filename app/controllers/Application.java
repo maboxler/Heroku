@@ -1,6 +1,7 @@
 package controllers;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import htwg.se.chess.Init;
@@ -14,7 +15,7 @@ import views.html.*;
 public class Application extends Controller {
 	GameInstance game;
 	ArrayList<WebSocket.Out<String> > playerList = new ArrayList<WebSocket.Out<String> >();
-	
+	List<GameInstance> gameList = new LinkedList<GameInstance>();
 	public Result index() {
 		return ok(index.render("UChess Titel"));
 	}
@@ -29,14 +30,16 @@ public class Application extends Controller {
 				if(playerList.isEmpty()) {
 					game = new GameInstance(out);
 					playerList.add(out);
+					gameList.add(game);
 				}
 				else {
 					playerList.remove(0);
 					game.setPlayer2(out);
 				}
-				
+								
 				in.onMessage(event -> {
-					System.out.println(event);
+					checkWhichGame(out);
+					//System.out.println(event);
 					switch(event.substring(0, 4)) {
 					case "RESE":	
 						game.reset(false, out);
@@ -53,6 +56,15 @@ public class Application extends Controller {
 					game.reset(true, out);
 					System.out.println("USER CLOSED CONNECTION:");
 				});
+			}
+
+			private void checkWhichGame(Out<String> out) {
+				if(gameList.size() > 1) {
+					for (GameInstance gameInstance : gameList) {
+						if(gameInstance.player1.equals(out) || gameInstance.player2.equals(out))
+							game = gameInstance;
+					}
+				}
 			}
 		};
 }

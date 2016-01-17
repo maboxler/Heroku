@@ -1,5 +1,5 @@
-New log file opened at Sun Jan 17 17:31:53 CET 2016 by 6500@PhantomPain
-jvm 6500@PhantomPain
+New log file opened at Sun Jan 17 19:29:51 CET 2016 by 8148@PhantomPain
+jvm 8148@PhantomPain
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.60-b23
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\project, returning: (heroku-build)
 Loading project definition from C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@7a26b7d7, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@3d04a463, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -69,7 +69,7 @@ Set current project to UChess beta (in build file:/C:/Users/Marco/Desktop/WebTec
 > server-handle-next-server-request
 > compile
 Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@5e98c784, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@77fe5bac, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -86,6 +86,554 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 3 s, completed 17.01.2016 17:32:03
+Total time: 2 s, completed 17.01.2016 19:30:01
 > server-post-command-cleanup
 > server-handle-next-server-request
+> {file:/C:/Users/Marco/Desktop/WebTechnologien/Heroku/Heroku/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@3cae6fc1, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 17.01.2016 19:30:02
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Marco/Desktop/WebTechnologien/Heroku/Heroku/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@28ca59f6, check cycles: false
+Total time: 0 s, completed 17.01.2016 19:30:02
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Marco/Desktop/WebTechnologien/Heroku/Heroku/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@263f7613, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 17.01.2016 19:30:03
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@48a18590, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@75dab78a directly...
+Java compilation took 0.687908777 s
+Java analysis took 0.221972575 s
+Java compile + analysis took 0.925032568 s
+Invalidating C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java...
+Invalidating (transitively) by inheritance from C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java...
+Initial set of included nodes: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+The C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java source file has the following regular definitions changed:
+	gameList.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java
+None of the modified names appears in C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\routes\main\router\Routes.scala. This dependency is not being considered for invalidation.
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed 17.01.2016 19:30:10
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@428fbeeb, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@5b4fa1aa directly...
+Java compilation took 0.270650571 s
+Java analysis took 0.522024812 s
+Java compile + analysis took 0.805264767 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed 17.01.2016 19:30:15
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@4cf4dd25, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@5b25aaa9 directly...
+Java compilation took 0.252623146 s
+Java analysis took 0.124506697 s
+Java compile + analysis took 0.392196652 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 17.01.2016 19:30:17
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@1520526c, check cycles: false
+Total time: 0 s, completed 17.01.2016 19:31:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Marco/Desktop/WebTechnologien/Heroku/Heroku/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@315ace84, check cycles: false
+Total time: 0 s, completed 17.01.2016 19:31:44
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@386a4767, check cycles: false
+Total time: 0 s, completed 17.01.2016 19:31:45
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Marco/Desktop/WebTechnologien/Heroku/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@33b0b10a, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\application.conf,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\logback.xml,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\routes,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\routes)
+Warning: node.js detection failed, sbt will use the Rhino based Trireme JavaScript engine instead to run JavaScript assets compilation, which in some cases may be orders of magnitude slower than using node.js.
+Total time: 3 s, completed 17.01.2016 19:32:00
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Marco/Desktop/WebTechnologien/Heroku/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@feda731, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\twirl\main\views\html\ng_wui.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.6
+Other repositories:
+Default repositories:
+Running cached compiler 480b7bfa, interfacing (CompilerInterface) with Scala compiler version 2.11.6
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes;C:\Users\Marco\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar
+	-classpath
+	C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes;C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\lib\UChess_Gut.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.1.1.jar;C:\Users\Marco\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.4.jar;C:\Users\Marco\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-enhancer\jars\play-enhancer-1.1.0.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.4.3.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.4.3.jar;C:\Users\Marco\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Marco\.ivy2\cache\com.typesafe\config\bundles\config-1.3.0.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.8.1.jar;C:\Users\Marco\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.7.jar;C:\Users\Marco\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.6.jar;C:\Users\Marco\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.4.jar;C:\Users\Marco\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.4.jar;C:\Users\Marco\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.4.jar;C:\Users\Marco\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.5.4.jar;C:\Users\Marco\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.5.4.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.4.3.jar;C:\Users\Marco\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.12.jar;C:\Users\Marco\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.12.jar;C:\Users\Marco\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.12.jar;C:\Users\Marco\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Marco\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.3.jar;C:\Users\Marco\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.3.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.13.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.13.jar;C:\Users\Marco\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.10.jar;C:\Users\Marco\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Marco\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Marco\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Marco\.ivy2\cache\com.google.inject\guice\jars\guice-4.0.jar;C:\Users\Marco\.ivy2\cache\javax.inject\javax.inject\jars\javax.inject-1.jar;C:\Users\Marco\.ivy2\cache\aopalliance\aopalliance\jars\aopalliance-1.0.jar;C:\Users\Marco\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\jars\guice-assistedinject-4.0.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.3.0.jar;C:\Users\Marco\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.15.jar;C:\Users\Marco\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Marco\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Marco\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Marco\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.1.Final.jar;C:\Users\Marco\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.1.6.RELEASE.jar;C:\Users\Marco\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.1.6.RELEASE.jar;C:\Users\Marco\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.1.6.RELEASE.jar;C:\Users\Marco\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.9.jar;C:\Users\Marco\.ivy2\cache\com.google.guava\guava\bundles\guava-18.0.jar;C:\Users\Marco\.ivy2\cache\com.google.code.findbugs\annotations\jars\annotations-2.0.1.jar;C:\Users\Marco\.ivy2\cache\net.jodah\typetools\bundles\typetools-0.4.1.jar;C:\Users\Marco\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Marco\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.21.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\io.netty\netty\bundles\netty-3.10.4.Final.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.4.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Marco\.ivy2\cache\com.zaxxer\HikariCP\bundles\HikariCP-2.3.7.jar;C:\Users\Marco\.ivy2\cache\com.h2database\h2\jars\h2-1.4.187.jar;C:\Users\Marco\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.4.3.jar;C:\Users\Marco\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.9.21.jar;C:\Users\Marco\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Marco\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Marco\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Marco\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Marco\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 5.758166616 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\application.conf,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\logback.xml,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\routes,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\routes)
+Total time: 8 s, completed 17.01.2016 19:32:35
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@24a2e0d3, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@4e1721be directly...
+Java compilation took 0.16277046 s
+Java analysis took 0.081999013 s
+Java compile + analysis took 0.252142824 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 17.01.2016 19:41:55
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@44300f66, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@42ee25c5 directly...
+Java compilation took 0.163809463 s
+Java analysis took 0.126044497 s
+Java compile + analysis took 0.296760683 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 17.01.2016 19:42:11
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Marco/Desktop/WebTechnologien/Heroku/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@21a2945c, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\application.conf,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\logback.xml,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\routes,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\routes)
+Total time: 2 s, completed 17.01.2016 19:42:26
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@49407b08, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@34f1ad1f directly...
+Java compilation took 0.149351977 s
+Java analysis took 0.076262203 s
+Java compile + analysis took 0.233852303 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 17.01.2016 19:52:03
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@1bfd62e7, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@36787a43 directly...
+Read from stdout: C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java:41:  play.mvc.WebSocket.In<java.lang.String> cannot be converted to play.mvc.WebSocket.Out<java.lang.String>
+C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java:41:  play.mvc.WebSocket.In<java.lang.String> cannot be converted to play.mvc.WebSocket.Out<java.lang.String>
+Read from stdout: in
+in
+Read from stdout: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 1 s, completed 17.01.2016 19:52:48
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@52f839ad, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@4674fac8 directly...
+Java compilation took 0.130129477 s
+Java analysis took 0.076445351 s
+Java compile + analysis took 0.214744152 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 17.01.2016 19:58:48
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@430e88fa, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@36f12ec5 directly...
+Java compilation took 0.118703317 s
+Java analysis took 0.069097801 s
+Java compile + analysis took 0.195877435 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 17.01.2016 19:59:18
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@3205d132, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 17.01.2016 19:59:34
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Marco/Desktop/WebTechnologien/Heroku/Heroku/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@2e3d0c9a, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\application.conf,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\application.conf)
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\logback.xml,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\conf\routes,C:\Users\Marco\Desktop\WebTechnologien\Heroku\Heroku\target\scala-2.11\classes\routes)
+Total time: 2 s, completed 17.01.2016 19:59:41
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 1
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@7bf6d86, check cycles: false
+Total time: 0 s, completed 17.01.2016 20:04:21
+> server-post-command-cleanup
+> server-handle-next-server-request
+Done executing sbt server engine, result Right(Exit(0))
+Closing listening server socket
+Waiting for socket thread
+Waiting for request processor thread
+Waiting for command engine result
+Returning control to sbt launcher with result Exit(0)
+Closing the 8148@PhantomPain logs at Sun Jan 17 20:04:43 CET 2016, goodbye.

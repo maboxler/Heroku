@@ -1,13 +1,13 @@
-New log file opened at Sun Jan 17 17:31:53 CET 2016 by 6500@PhantomPain
-Taking next connection to: 50648
-New client attempting to connect on port: 50649-50648
-  Address = /192.168.2.108:50648
-This client on port 50649 has uuid 342c8d7e-8840-45ae-9a3d-90da10c20d91 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-342c8d7e-8840-45ae-9a3d-90da10c20d91
-Taking next connection to: 50648
-New client attempting to connect on port: 50650-50648
-  Address = /192.168.2.108:50648
-Handshake exception on socket: 50650
+New log file opened at Sun Jan 17 19:29:51 CET 2016 by 8148@PhantomPain
+Taking next connection to: 51920
+New client attempting to connect on port: 51921-51920
+  Address = /192.168.2.108:51920
+This client on port 51921 has uuid 1dbc59fb-743d-474a-bed3-8e67869f319c configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-1dbc59fb-743d-474a-bed3-8e67869f319c
+Taking next connection to: 51920
+New client attempting to connect on port: 51922-51920
+  Address = /192.168.2.108:51920
+Handshake exception on socket: 51922
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -23,9 +23,69 @@ Caused by: java.net.SocketException: Software caused connection abort: recv fail
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 50648
-New client attempting to connect on port: 50651-50648
-  Address = /192.168.2.108:50648
-This client on port 50651 has uuid fe259834-c337-4055-81c1-8aaa7017e826 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-342c8d7e-8840-45ae-9a3d-90da10c20d91, activator-fe259834-c337-4055-81c1-8aaa7017e826
-Taking next connection to: 50648
+Taking next connection to: 51920
+New client attempting to connect on port: 51923-51920
+  Address = /192.168.2.108:51920
+This client on port 51923 has uuid 87dbc903-4554-4e1a-86cc-ba00278bd166 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-1dbc59fb-743d-474a-bed3-8e67869f319c, activator-87dbc903-4554-4e1a-86cc-ba00278bd166
+Taking next connection to: 51920
+New client attempting to connect on port: 51929-51920
+  Address = /192.168.2.108:51920
+Handshake exception on socket: 51929
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 51920
+New client attempting to connect on port: 51930-51920
+  Address = /192.168.2.108:51920
+This client on port 51930 has uuid 24901a8c-a2c0-49c7-a472-039175f4fc77 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-87dbc903-4554-4e1a-86cc-ba00278bd166, play-fork-run-24901a8c-a2c0-49c7-a472-039175f4fc77
+Taking next connection to: 51920
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51920
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51920
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51920
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51920
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51920
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51920
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51920
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51920
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51920
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51920
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 8148@PhantomPain logs at Sun Jan 17 20:04:43 CET 2016, goodbye.
