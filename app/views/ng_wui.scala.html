@@ -141,10 +141,8 @@
 		        
 		        $scope.sendMessage2 = function(keyEvent, msg){
 		        	 if (keyEvent.which === 13) {
-			        	  	$socket.send("CHAT  " + msg);
-				        	$scope.messages.push({"type": "Me", "msg": msg});
-				        	$scope.chat = null;
-		        	  }
+		        		 sendMessage(msg);
+		        	 }
 		        	
 		        };
 		    });

@@ -14,8 +14,9 @@ import views.html.*;
 
 public class Application extends Controller {
 	GameInstance game;
-	ArrayList<WebSocket.Out<String> > playerList = new ArrayList<WebSocket.Out<String> >();
+	ArrayList<WebSocket.Out<String>> playerList = new ArrayList<WebSocket.Out<String>>();
 	List<GameInstance> gameList = new LinkedList<GameInstance>();
+
 	public Result index() {
 		return ok(index.render("UChess Titel"));
 	}
@@ -26,30 +27,32 @@ public class Application extends Controller {
 
 	public WebSocket<String> webSocket() {
 		return new WebSocket<String>() {
-			public void onReady(WebSocket.In<String> in, WebSocket.Out<String>  out) {
-				if(playerList.isEmpty()) {
+			public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
+				if (playerList.isEmpty()) {
 					game = new GameInstance(out);
 					playerList.add(out);
 					gameList.add(game);
-				}
-				else {
-					playerList.remove(0);
+					System.out.println("count list " + playerList.size());
+				} else {
+					playerList.clear();
+					System.out.println("clear " + playerList.size());
+					// playerList.remove(0);
 					game.setPlayer2(out);
 				}
-								
+
 				in.onMessage(event -> {
-					checkWhichGame(out);
-					//System.out.println(event);
-					switch(event.substring(0, 4)) {
-					case "RESE":	
+					game = checkWhichGame(out);
+					// System.out.println(event);
+					switch (event.substring(0, 4)) {
+					case "RESE":
 						game.reset(false, out);
 						break;
 					case "CHAT":
 						game.chat(event, out);
 						break;
-					default:	
+					default:
 						game.move(event, out);
-					}					
+					}
 
 				});
 				in.onClose(() -> {
@@ -58,15 +61,17 @@ public class Application extends Controller {
 				});
 			}
 
-			private void checkWhichGame(Out<String> out) {
-				if(gameList.size() > 1) {
+			private GameInstance checkWhichGame(Out<String> out) {
+				if (gameList.size() > 1) {
 					for (GameInstance gameInstance : gameList) {
-						if(gameInstance.player1.equals(out) || gameInstance.player2.equals(out))
-							game = gameInstance;
+						if (gameInstance.player1.equals(out) || gameInstance.player2.equals(out))
+							return gameInstance;
 					}
+
 				}
+				return gameList.get(0);
 			}
 		};
-}
+	}
 
 }
