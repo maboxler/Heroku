@@ -6,48 +6,8 @@
  
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-		
-		<style>
-			.field {
-				float: none;
-				margin: 20px auto;
-			}
-		    .cell {
-                display: block;
-		        float: left;
-		        width:  12.5%;
-		        height: 12.5%;
-                margin: 0px;
-		    }
-		    #control {
-		    	display: block;
-		        float: left;
-		    	background-color: #D9D1C6;
-		    	border-radius: 10px;
-		    	padding: 10px;
-		    }
-		    
-		    body {
-                background-image: url("bg.jpg");
-            } 
-		  
-		    
-		    #chat > div > span {
-		    	margin: 3px;
-		    	padding: 5px;
-		    	border-radius: 5px;
-		    	width: 100%;
-		    	display:block;
-		    }
-		    .chat-me {
-		    	text-align: right;
-		    	background-color: #FFFFFD;
-		    }
-		    .chat-opponent {
-		    	text-align: left;
-		    	background-color: #E3FFC8;
-		    }
-		</style>
+		<link rel="stylesheet" href="/assets/stylesheets/main.css">
+
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
@@ -91,12 +51,15 @@
 							alert(message.data.substr(message.data.length - 5) + " has won the game");
 							break;
 						case "black":
+						    $scope.highlight = {};
 							$scope.status = "It´s Black Turn";
 							break;
 						case "white":
+						    $scope.highlight = {};
 							$scope.status = "It´s White Turn";
 							break;
 						default:
+						    $scope.highlight = {};
 							$scope.enableChat = true;
 							var msg = JSON.parse(message.data);
 							$scope.figures = msg.figures;
@@ -120,16 +83,18 @@
 		    	$scope.move = function(pos) {
 		    		if(i == 1) {
 			    		str1 = pos;
+			    		$scope.highlight[pos] = true;
 			    		$scope.click = "1 Feld gedrueckt";
 					} else if(i == 2) {
 						endpos = str1 + " " + pos;
+						$scope.highlight[pos] = true;
 		    			console.log("send pos " + endpos);
 		    			$socket.send(endpos);
 		    			i = 0;
 		    			str1 = "";
 		    			endpos = "";
 		    			$scope.click = "0 Felder gedrueckt";
-		    		}https://www.google.de/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwi-veT6hrDKAhXFBywKHfGSDLUQFggoMAE&url=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F24899699%2Fhow-to-set-background-image-of-div-with-ng-style&usg=AFQjCNGBBh4aQYEPT4MRYGL2V28oKh82bw&sig2=9WPgcWQ80WnTbGsggz2V3Q
+		    		}
 					i = i + 1;
 		        };
 		        
@@ -152,7 +117,7 @@
     	<div class="field col-md-8">
 	    	<div class="col-md-9">
 	    		<span ng-repeat="figur in figures">
-		    		<img ng-src="/assets/images/{{figur.color}}{{figur.figure}}{{figur.bg}}.jpg" ng-click="move(figur.pos)" class="cell"/>
+		    		<img ng-src="/assets/images/{{figur.color}}{{figur.figure}}{{figur.bg}}.jpg" ng-click="move(figur.pos)" class="cell" ng-model=highlight[figur.pos] ng-class="{'highlight': highlight[figur.pos] == true}"/>
 	    		</span>
 	    	</div>
 	    	<div id="control" class="col-md-3">

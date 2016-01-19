@@ -1,0 +1,56 @@
+.field {
+	float: none;
+	margin: 20px auto;
+}
+.cell {
+    display: block;
+    float: left;
+    width:  12.5%;
+    height: 12.5%;
+    margin: 0px;
+}
+.cell:nth-child(odd){
+    border: 3px solid pink;
+}
+.cell:nth-child(even){
+    border: 3px solid brown;
+}
+#control {
+	display: block;
+    float: left;
+	background-color: #D9D1C6;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+body {
+    background-image: url("/assets/images/bg.jpg");
+    background-size: cover;
+} 
+
+@media (min-width: 992px) {
+    #control {
+        margin-top: 0px;
+    }
+}
+
+
+#chat > div > span {
+	margin: 3px;
+	padding: 5px;
+	border-radius: 5px;
+	width: 100%;
+	display:block;
+}
+.chat-me {
+	text-align: right;
+	background-color: #FFFFFD;
+}
+.chat-opponent {
+	text-align: left;
+	background-color: #E3FFC8;
+}
+.highlight {
+    border: 3px solid lightgreen;
+}
